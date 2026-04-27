@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<script>(function(){var t=localStorage.getItem('pvk-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Về Tôi — Đào Ngọc Hà · Phim & Khói</title>
+  <meta name="description" content="Đào Ngọc Hà — đạo diễn, người sáng lập HIGH Club, tốt nghiệp Đại học Sân khấu Điện ảnh Hà Nội. Phim & Khói là nơi tôi chia sẻ tình yêu điện ảnh và kiến thức về làm phim."/>
+  <meta name="keywords" content="Đào Ngọc Hà, đạo diễn, High Club, hài kịch ứng tác, Phim và Khói, sân khấu, điện ảnh, Hà Nội"/>
+  <meta name="author" content="Đào Ngọc Hà"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://phimvakhoi.com/ve-toi.html"/>
+
+  <meta property="og:type" content="profile"/>
+  <meta property="og:url" content="https://phimvakhoi.com/ve-toi.html"/>
+  <meta property="og:title" content="Về Tôi — Đào Ngọc Hà · Phim & Khói"/>
+  <meta property="og:description" content="Đạo diễn, người sáng lập HIGH Club. Tốt nghiệp Đại học Sân khấu Điện ảnh Hà Nội. Phim & Khói là nơi điện ảnh gặp gỡ thi ca."/>
+  <meta property="og:image" content="https://phimvakhoi.netlify.app/assets/images/dao-ngoc-ha.jpg"/>
+  <meta property="og:site_name" content="Phim &amp; Khói"/>
+  <meta property="og:locale" content="vi_VN"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Về Tôi — Đào Ngọc Hà · Phim & Khói"/>
+  <meta name="twitter:description" content="Đạo diễn, người sáng lập HIGH Club. Chia sẻ tình yêu điện ảnh và kiến thức làm phim."/>
+  <meta name="twitter:image" content="https://phimvakhoi.netlify.app/assets/images/dao-ngoc-ha.jpg"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Đào Ngọc Hà",
+    "jobTitle": "Đạo diễn",
+    "url": "https://phimvakhoi.com/ve-toi.html",
+    "sameAs": ["https://www.facebook.com/highcomedia"],
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Đại học Sân khấu Điện ảnh Hà Nội"
+    },
+    "description": "Đạo diễn, người sáng lập HIGH Club (Haha Improv Games Hanoi). Tốt nghiệp Đại học Sân khấu Điện ảnh Hà Nội.",
+    "inLanguage": "vi-VN"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+
+  <style>
+    /* ── ABOUT PAGE SPECIFIC ── */
+    .about-hero {
+      background: var(--bg-deep);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px 0;
+    }
+    .about-hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 60px;
+      align-items: end;
+    }
+    .about-hero-text {
+      padding-bottom: 60px;
+    }
+    .about-eyebrow {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--sage);
+      margin-bottom: 16px;
+    }
+    .about-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 52px;
+      font-weight: 900;
+      color: var(--beige);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    .about-name em { font-style: italic; color: var(--sage); }
+    .about-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-style: italic;
+      color: var(--text-dim);
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+    .about-intro {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--text);
+      max-width: 560px;
+      margin-bottom: 32px;
+    }
+    .about-intro strong { color: var(--beige); font-weight: 600; }
+    .about-badges {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .about-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--text-dim);
+      letter-spacing: .04em;
+    }
+    .about-badge.b-forest { border-color: var(--forest); color: var(--sage); }
+    .about-badge.b-beige  { border-color: var(--beige);  color: var(--beige); }
+
+    .about-photo-col {
+      position: relative;
+      align-self: end;
+    }
+    .about-photo-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 3/4;
+      border-radius: 4px 4px 0 0;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      border-bottom: none;
+    }
+    .about-photo-wrap img {
+      width: 100%; height: 100%; object-fit: cover; object-position: top center;
+    }
+    .about-photo-wrap::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, var(--bg-deep) 0%, transparent 40%);
+    }
+    .photo-caption {
+      position: absolute;
+      bottom: 16px; left: 16px; right: 16px;
+      z-index: 2;
+      font-size: 10px;
+      color: var(--text-faint);
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* ── CONTENT SECTIONS ── */
+    .about-sections {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 64px 24px;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .about-main { }
+    .about-sidebar { }
+
+    /* Section blocks */
+    .about-section {
+      margin-bottom: 56px;
+    }
+    .section-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .section-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--beige);
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+    .section-heading em { font-style: italic; color: var(--sage); }
+    .about-prose p {
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--text);
+      margin-bottom: 16px;
+    }
+    .about-prose p:last-child { margin-bottom: 0; }
+    .about-prose strong { color: var(--beige); font-weight: 600; }
+    .about-prose em { color: var(--sage); font-style: italic; }
+
+    /* High Club card */
+    .highclub-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--forest);
+      border-radius: 4px;
+      padding: 24px 28px;
+      margin-bottom: 20px;
+    }
+    .hc-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px;
+      font-weight: 900;
+      color: var(--beige);
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+    }
+    .hc-sub {
+      font-size: 11px;
+      color: var(--sage);
+      letter-spacing: .06em;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .hc-desc {
+      font-size: 13px;
+      line-height: 1.75;
+      color: var(--text);
+    }
+    .hc-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .hc-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--beige);
+      margin-bottom: 3px;
+    }
+    .hc-stat-lbl {
+      font-size: 10px;
+      color: var(--text-faint);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    /* Press coverage */
+    .press-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .press-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 12px 16px;
+      text-decoration: none;
+      transition: border-color .2s, background .2s;
+    }
+    .press-item:hover {
+      border-color: var(--forest);
+      background: var(--bg-hover);
+    }
+    .press-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--sage); flex-shrink: 0;
+    }
+    .press-name {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--beige);
+      margin-bottom: 2px;
+    }
+    .press-desc {
+      font-size: 11px;
+      color: var(--text-faint);
+    }
+
+    /* Sidebar */
+    .sb-about-block {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px 22px;
+      margin-bottom: 20px;
+    }
+    .sb-about-ttl {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--forest);
+      margin-bottom: 16px;
+    }
+    .cv-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border);
+    }
+    .cv-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .cv-year {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sage);
+      white-space: nowrap;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+    .cv-text {
+      font-size: 12px;
+      color: var(--text);
+      line-height: 1.6;
+    }
+    .cv-text strong { color: var(--beige); display: block; font-weight: 600; margin-bottom: 2px; }
+
+    .about-quote {
+      border-left: 3px solid var(--sage);
+      padding: 16px 22px;
+      margin: 28px 0;
+      background: var(--bg-card);
+      border-radius: 0 4px 4px 0;
+    }
+    .about-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      font-style: italic;
+      color: var(--beige);
+      line-height: 1.65;
+      margin: 0 0 8px;
+    }
+    .about-quote cite {
+      font-size: 11px;
+      color: var(--text-faint);
+      font-style: normal;
+      letter-spacing: .04em;
+    }
+
+    /* Contact */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .contact-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 14px 18px;
+      text-decoration: none;
+      transition: border-color .2s, background .2s;
+    }
+    .contact-btn:hover { border-color: var(--sage); background: var(--bg-hover); }
+    .contact-icon { font-size: 18px; flex-shrink: 0; }
+    .contact-label { font-size: 10px; color: var(--text-faint); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 2px; }
+    .contact-val { font-size: 12px; color: var(--beige); font-weight: 600; }
+
+    /* Awards */
+    .award-item {
+      display: flex;
+      gap: 14px;
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border);
+    }
+    .award-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .award-icon { font-size: 20px; flex-shrink: 0; }
+    .award-title { font-size: 12px; font-weight: 600; color: var(--beige); margin-bottom: 3px; }
+    .award-meta  { font-size: 11px; color: var(--text-faint); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-hero-inner { grid-template-columns: 1fr; }
+      .about-photo-col { display: none; }
+      .about-name { font-size: 38px; }
+      .about-sections { grid-template-columns: 1fr; gap: 32px; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .hc-stats { grid-template-columns: repeat(3,1fr); }
+    }
+    @media (max-width: 640px) {
+      .about-name { font-size: 30px; }
+      .about-hero { padding: 48px 16px 0; }
+      .about-sections { padding: 40px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="./" class="nav-logo">Phim <span class="amp">&</span> Khói</a>
+    <div class="nav-links">
+      <a href="./">Trang chủ</a>
+      <a href="blog/">Blog</a>
+      <a href="khoahoc/">Khoá học</a>
+      <a href="ve-toi.html" class="active">Về tôi</a>
+    </div>
+    <div class="nav-search-wrap">
+      <span class="nav-search-icon">🔍</span>
+      <input class="nav-search" type="text" placeholder="Tìm kiếm..." aria-label="Tìm kiếm bài viết"/>
+    </div>
+      <div class="nav-spacer"></div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+      <svg class="hb-icon" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect class="hb-line hb-line-1" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect class="hb-line hb-line-2" y="6" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect class="hb-line hb-line-3" y="12" width="20" height="2" rx="1" fill="currentColor"/>
+      </svg>
+    </button>
+    </div>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="about-hero">
+  <div class="about-hero-inner">
+    <div class="about-hero-text">
+      <div class="about-eyebrow">● Về tôi</div>
+      <h1 class="about-name">Đào <em>Ngọc Hà</em></h1>
+      <div class="about-title">Đạo diễn · Người kể chuyện · Cinephile</div>
+      <p class="about-intro">
+        Tôi tin rằng điện ảnh không phải chỉ để giải trí — nó là <strong>ngôn ngữ mạnh nhất mà nhân loại từng phát minh</strong> để kể những câu chuyện quan trọng nhất. Và tôi tin rằng khi khán giả hiểu sâu hơn về cách một bộ phim được tạo ra, trải nghiệm xem phim của họ sẽ thay đổi hoàn toàn.
+      </p>
+      <p class="about-intro">
+        Phim &amp; Khói là nơi tôi chia sẻ tất cả những gì tôi biết — từ kỹ thuật quay phim, ngôn ngữ đạo diễn, đến cái cảm giác ngồi trong rạp tối và để một bộ phim thay đổi bạn từ bên trong.
+      </p>
+      <div class="about-badges">
+        <span class="about-badge b-forest">🎓 Tốt nghiệp Đại học Sân khấu Điện ảnh HN</span>
+        <span class="about-badge b-beige">🎭 Sáng lập HIGH Club</span>
+        <span class="about-badge">📡 VTV · VOV · Báo Nhân Dân</span>
+      </div>
+    </div>
+    <div class="about-photo-col">
+      <div class="about-photo-wrap">
+        <img src="assets/images/dao-ngoc-ha.jpg" alt="Đào Ngọc Hà — Đạo diễn, người sáng lập HIGH Club"/>
+        <div class="photo-caption">Đào Ngọc Hà — đạo diễn, người sáng lập HIGH Club</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── MAIN CONTENT ── -->
+<div class="about-sections">
+  <div class="about-main">
+
+    <!-- Hành trình -->
+    <div class="about-section">
+      <div class="section-label">Hành trình</div>
+      <h2 class="section-heading">Từ sân khấu kịch nói<br>đến <em>tình yêu điện ảnh</em></h2>
+      <div class="about-prose">
+        <p>
+          Tôi bắt đầu từ sân khấu — không phải vì đó là con đường dễ dàng, mà vì sân khấu là nơi duy nhất tôi cảm thấy mình thật sự đang sống. Tốt nghiệp chuyên ngành Đạo diễn tại <strong>Đại học Sân khấu Điện ảnh Hà Nội</strong>, tôi học được rằng kể chuyện không phải là kỹ năng — nó là bản năng được mài giũa qua hàng nghìn giờ quan sát con người, lắng nghe cảm xúc, và dám thất bại trước khán giả thật.
+        </p>
+        <p>
+          Trong những năm làm nghề, tôi nhận ra một điều: <strong>khoảng cách giữa sân khấu và điện ảnh nhỏ hơn người ta nghĩ rất nhiều</strong>. Cả hai đều là nghệ thuật của khoảnh khắc — sự khác biệt chỉ nằm ở chỗ điện ảnh cho phép bạn đóng băng khoảnh khắc đó mãi mãi.
+        </p>
+        <p>
+          Phim &amp; Khói ra đời từ câu hỏi tôi tự hỏi mình mỗi ngày: <em>Làm sao để người xem Việt Nam có thể tiếp cận kiến thức điện ảnh nghiêm túc, được viết bằng tiếng Việt, không phán xét, không hàn lâm quá mức?</em> Đây là câu trả lời của tôi.
+        </p>
+      </div>
+
+      <div class="about-quote">
+        <p>"Một bộ phim tốt không dạy bạn cách nghĩ — nó dạy bạn rằng bạn có thể nghĩ nhiều hơn những gì bạn tưởng."</p>
+        <cite>— Đào Ngọc Hà</cite>
+      </div>
+    </div>
+
+    <!-- HIGH Club -->
+    <div class="about-section">
+      <div class="section-label">HIGH Club</div>
+      <h2 class="section-heading">Khi sân khấu<br>trở thành <em>trò chơi</em></h2>
+      <div class="about-prose">
+        <p>
+          Tháng 7 năm 2020, giữa một Hà Nội vừa bước ra từ giãn cách xã hội, tôi cùng những người bạn diễn viên sáng lập <strong>HIGH Club</strong> — nhóm hài kịch ứng tác (improv comedy) đầu tiên của Hà Nội. HIGH là viết tắt của <em>Haha Improv Games Hanoi</em>, vì chúng tôi tin rằng mọi niềm vui trong cuộc sống đều bắt đầu từ tiếng cười.
+        </p>
+        <p>
+          Hài kịch ứng tác của HIGH Club không có kịch bản, không có phục trang chuẩn bị sẵn — chỉ có diễn viên, khán giả, và khoảnh khắc hiện tại. <strong>Khán giả là người đồng sáng tác</strong>: họ đưa ra gợi ý, và diễn viên biến chúng thành câu chuyện ngay lập tức trên sân khấu. Không có hai buổi diễn nào giống nhau.
+        </p>
+      </div>
+
+      <div class="highclub-card">
+        <div class="hc-logo">HIGH CLUB</div>
+        <div class="hc-sub">Haha Improv Games Hanoi · Thành lập 7/2020</div>
+        <div class="hc-desc">Nhóm hài kịch ứng tác chuyên nghiệp đầu tiên tại Hà Nội. Các thành viên là diễn viên kịch nói chuyên nghiệp, đã biểu diễn tại nhiều địa điểm nghệ thuật lớn ở Hà Nội và được đưa tin bởi VTV, VOV, Báo Nhân Dân.</div>
+        <div class="hc-stats">
+          <div>
+            <div class="hc-stat-num">2020</div>
+            <div class="hc-stat-lbl">Năm thành lập</div>
+          </div>
+          <div>
+            <div class="hc-stat-num">10+</div>
+            <div class="hc-stat-lbl">Shows biểu diễn</div>
+          </div>
+          <div>
+            <div class="hc-stat-num">VTV · VOV</div>
+            <div class="hc-stat-lbl">Báo chí đưa tin</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-prose">
+        <p>
+          Vở kịch <strong>"Những Chiếc Ghế"</strong> (chuyển thể từ Ionesco) do HIGH Club thực hiện đã đoạt <strong>Giải Vàng Diễn viên trẻ tại Hội diễn Sân khấu trẻ Toàn quốc năm 2020</strong> — một trong những giải thưởng uy tín nhất dành cho thế hệ nghệ sĩ trẻ Việt Nam.
+        </p>
+      </div>
+    </div>
+
+    <!-- Báo chí -->
+    <div class="about-section">
+      <div class="section-label">Báo chí</div>
+      <h2 class="section-heading">HIGH Club trên<br><em>truyền thông</em></h2>
+      <div class="press-list">
+        <a href="https://vtv.vn/van-hoa-giai-tri/hai-kich-ung-tac-dua-kich-den-gan-cong-chung-20210321142910693.htm" target="_blank" class="press-item">
+          <div class="press-dot"></div>
+          <div>
+            <div class="press-name">VTV News — Đài Truyền hình Việt Nam</div>
+            <div class="press-desc">Hài kịch ứng tác — đưa kịch đến gần công chúng</div>
+          </div>
+        </a>
+        <a href="https://vov.vn/van-hoa/hai-kich-ung-tac-vi-nghe-thuat-la-cuoc-song-831403.vov" target="_blank" class="press-item">
+          <div class="press-dot"></div>
+          <div>
+            <div class="press-name">VOV News — Đài Tiếng nói Việt Nam</div>
+            <div class="press-desc">Hài kịch ứng tác — vì nghệ thuật là cuộc sống</div>
+          </div>
+        </a>
+        <a href="https://nhandan.vn/kich-ung-tac-loai-hinh-san-khau-moi-me-va-hap-dan-post636918.html" target="_blank" class="press-item">
+          <div class="press-dot"></div>
+          <div>
+            <div class="press-name">Báo Nhân Dân</div>
+            <div class="press-desc">Kịch ứng tác, loại hình sân khấu mới mẻ và hấp dẫn</div>
+          </div>
+        </a>
+        <a href="#" class="press-item">
+          <div class="press-dot"></div>
+          <div>
+            <div class="press-name">VTV1 — Chuyển Động 24 & VTV6 — Bản Tin Thế Hệ Số</div>
+            <div class="press-desc">Phóng sự về hài kịch ứng tác và HIGH Club</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Về Phim & Khói -->
+    <div class="about-section">
+      <div class="section-label">Phim & Khói</div>
+      <h2 class="section-heading">Tại sao tôi làm<br><em>trang này</em></h2>
+      <div class="about-prose">
+        <p>
+          Tôi nhận ra rằng khán giả Việt Nam xem phim rất nhiều — nhưng kiến thức về điện ảnh thì còn rất thiếu và rải rác. Phần lớn nội dung tiếng Việt về phim chỉ dừng lại ở review hay tóm tắt nội dung. Không ai giải thích <em>tại sao cú cắt đó gây cảm xúc mạnh như vậy</em>, hay <em>màu sắc trong phim đó được chọn lựa có chủ ý ra sao</em>.
+        </p>
+        <p>
+          Phim &amp; Khói ra đời để lấp đầy khoảng trống đó. Tôi viết về đạo diễn, quay phim, biên kịch, diễn xuất — những kiến thức mà tôi đã học và thực hành trong nhiều năm làm nghề — bằng tiếng Việt, cho người Việt, không hàn lâm nhưng cũng không hời hợt.
+        </p>
+        <p>
+          Mục tiêu của tôi đơn giản: <strong>sau khi đọc một bài trên Phim &amp; Khói, bạn sẽ không bao giờ xem phim theo cách cũ nữa.</strong>
+        </p>
+      </div>
+    </div>
+
+  </div><!-- /about-main -->
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="about-sidebar">
+
+    <div class="sb-about-block">
+      <div class="sb-about-ttl">⏱ Tiểu sử</div>
+      <div class="cv-item">
+        <div class="cv-year">Hiện tại</div>
+        <div class="cv-text"><strong>Sáng lập & Biên tập Phim & Khói</strong>Blog phân tích điện ảnh chuyên sâu bằng tiếng Việt</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-year">2020 →</div>
+        <div class="cv-text"><strong>Sáng lập HIGH Club</strong>Haha Improv Games Hanoi — nhóm hài kịch ứng tác chuyên nghiệp đầu tiên tại Hà Nội</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-year">Hoạt động</div>
+        <div class="cv-text"><strong>Đạo diễn sân khấu</strong>Dàn dựng các vở kịch đương đại, nghiên cứu ngôn ngữ hình ảnh và kể chuyện</div>
+      </div>
+      <div class="cv-item">
+        <div class="cv-year">Học vấn</div>
+        <div class="cv-text"><strong>Đại học Sân khấu Điện ảnh Hà Nội</strong>Chuyên ngành Đạo diễn</div>
+      </div>
+    </div>
+
+    <div class="sb-about-block">
+      <div class="sb-about-ttl">🏆 Giải thưởng</div>
+      <div class="award-item">
+        <div class="award-icon">🥇</div>
+        <div>
+          <div class="award-title">Giải Vàng Diễn viên trẻ</div>
+          <div class="award-meta">Hội diễn Sân khấu trẻ Toàn quốc 2020 · Vở "Những Chiếc Ghế" (Ionesco)</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sb-about-block">
+      <div class="sb-about-ttl">💡 Lĩnh vực chuyên môn</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px;">
+        <span class="about-badge b-forest" style="font-size:10px;">Đạo diễn</span>
+        <span class="about-badge" style="font-size:10px;">Biên kịch</span>
+        <span class="about-badge" style="font-size:10px;">Diễn xuất</span>
+        <span class="about-badge b-forest" style="font-size:10px;">Improv Comedy</span>
+        <span class="about-badge" style="font-size:10px;">Phân tích phim</span>
+        <span class="about-badge" style="font-size:10px;">Ngôn ngữ hình ảnh</span>
+        <span class="about-badge b-forest" style="font-size:10px;">Kịch nói</span>
+        <span class="about-badge" style="font-size:10px;">Color Grading</span>
+      </div>
+    </div>
+
+    <div class="sb-about-block">
+      <div class="sb-about-ttl">📬 Liên hệ</div>
+      <div class="contact-grid" style="grid-template-columns:1fr;">
+        <a href="https://facebook.com/highcomedia" target="_blank" class="contact-btn">
+          <span class="contact-icon">👥</span>
+          <div>
+            <div class="contact-label">Facebook</div>
+            <div class="contact-val">facebook.com/highcomedia</div>
+          </div>
+        </a>
+        <a href="mailto:highcomedia@gmail.com" class="contact-btn">
+          <span class="contact-icon">✉</span>
+          <div>
+            <div class="contact-label">Email hợp tác</div>
+            <div class="contact-val">highcomedia@gmail.com</div>
+          </div>
+        </a>
+        <a href="http://highcomedia.com" target="_blank" class="contact-btn">
+          <span class="contact-icon">🌐</span>
+          <div>
+            <div class="contact-label">Website HIGH Club</div>
+            <div class="contact-val">highcomedia.com</div>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="sb-about-block">
+      <div class="sb-about-ttl">📬 Nhận bài mới</div>
+      <p style="font-size:11px;color:var(--text-faint);margin-bottom:10px;font-style:italic;">Mỗi thứ Sáu một lần. Không spam.</p>
+      <input class="nl-input" type="email" placeholder="email@cua-ban.com"/>
+      <button class="nl-btn" style="margin-top:8px;width:100%;">Đăng ký</button>
+    </div>
+
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div><div class="f-logo">Phim <span class="amp">&</span> Khói</div><p class="f-desc">Nơi điện ảnh gặp gỡ thi ca.</p></div>
+      <div><div class="f-col-ttl">Nội dung</div><ul class="f-links"><li><a href="blog/">Blog</a></li></ul></div>
+      <div><div class="f-col-ttl">Khoá học</div><ul class="f-links"><li><a href="khoahoc/">Xem khoá học</a></li></ul></div>
+      <div><div class="f-col-ttl">Liên hệ</div><ul class="f-links"><li><a href="ve-toi.html">Về tôi</a></li><li><a href="mailto:highcomedia@gmail.com">Email</a></li></ul></div>
+    </div>
+        <div class="footer-bottom">
+      <div class="f-copy">© 2026 Phim &amp; Khói · Đào Ngọc Hà</div>
+      <div class="footer-bottom-right">
+        <div class="theme-toggle">
+          <span class="theme-toggle-label">GIAO DIỆN</span>
+          <button class="theme-btn theme-btn-dark"  data-theme="dark"  onclick="setTheme('dark')"  title="Tối"  aria-label="Chế độ tối"></button>
+          <button class="theme-btn theme-btn-light" data-theme="light" onclick="setTheme('light')" title="Sáng" aria-label="Chế độ sáng"></button>
+        </div>
+        <div class="f-social">
+        <a href="#" class="soc-btn" title="YouTube" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="Facebook" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1c0 6 4.4 11 10.1 11.9v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.3l-.5 3.5h-2.8V24C19.6 23.1 24 18.1 24 12.1z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="Instagram" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="TikTok" aria-label="TikTok">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 3.3A4.5 4.5 0 0 1 15.2 0h-3.3v16.6a2.7 2.7 0 0 1-2.7 2.5 2.7 2.7 0 0 1-2.7-2.7 2.7 2.7 0 0 1 2.7-2.7c.3 0 .5 0 .8.1V10.4a6 6 0 0 0-.8-.1 6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6V8.2a7.8 7.8 0 0 0 4.4 1.3V6.2a4.5 4.5 0 0 1-2.1-.9z"/></svg>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/articles.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/theme.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<svg viewBox="0 0 260 52" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400&amp;display=swap');
+  </style>
+  <linearGradient id="nb" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%"   stop-color="#6a5430" stop-opacity="0.9"/>
+    <stop offset="100%" stop-color="#1a1208" stop-opacity="0"/>
+  </linearGradient>
+</defs>
+<rect width="260" height="52" fill="#080808"/>
+<polygon points="22,-4 6,52 38,52"  fill="url(#nb)" opacity="0.55"/>
+<polygon points="22,-4 12,52 32,52" fill="url(#nb)" opacity="0.60"/>
+<polygon points="22,-4 17,52 27,52" fill="url(#nb)" opacity="0.70"/>
+<line x1="50" y1="12" x2="50" y2="40" stroke="#2a2418" stroke-width="1"/>
+<text x="62" y="33"
+  font-family="Lora, Georgia, serif"
+  font-style="italic" font-size="22"
+  fill="#b8a68a">Phim &amp; Khoi</text>
+</svg>

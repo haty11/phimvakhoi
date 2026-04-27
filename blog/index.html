@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<script>(function(){var t=localStorage.getItem('pvk-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog — Phim & Khói</title>
+  <meta name="description" content="Tất cả bài viết về phân tích phim, kỹ thuật quay phim, review và tin tức điện ảnh trên Phim & Khói — viết bằng tiếng Việt, dành cho cinephile Việt Nam."/>
+  <meta name="keywords" content="blog điện ảnh, phân tích phim tiếng Việt, kỹ thuật quay phim, review phim, tin tức điện ảnh, Wes Anderson, Kubrick, Nolan"/>
+  <meta name="author" content="Phim &amp; Khói"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://phimvakhoi.com/blog/"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://phimvakhoi.com/blog/"/>
+  <meta property="og:title" content="Blog — Phim &amp; Khói"/>
+  <meta property="og:description" content="Phân tích phim, kỹ thuật quay phim, review và tin tức điện ảnh bằng tiếng Việt."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1478720568477-152d9b8a8de7?w=1200&q=85"/>
+  <meta property="og:site_name" content="Phim &amp; Khói"/>
+  <meta property="og:locale" content="vi_VN"/>
+
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Blog — Phim &amp; Khói"/>
+  <meta name="twitter:description" content="Phân tích phim chuyên sâu và kiến thức điện ảnh bằng tiếng Việt."/>
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1478720568477-152d9b8a8de7?w=1200&q=85"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Phim & Khói — Blog",
+    "url": "https://phimvakhoi.com/blog/",
+    "description": "Blog phân tích phim, kỹ thuật điện ảnh và review phim bằng tiếng Việt.",
+    "inLanguage": "vi-VN",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Phim & Khói",
+      "url": "https://phimvakhoi.com"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../" class="nav-logo">Phim <span class="amp">&</span> Khói</a>
+    <div class="nav-links">
+      <a href="../">Trang chủ</a>
+      <a href="./" class="active">Blog</a>
+      <a href="../khoahoc/">Khoá học</a>
+      <a href="../ve-toi.html">Về tôi</a>
+    </div>
+    <div class="nav-search-wrap">
+      <span class="nav-search-icon">🔍</span>
+      <input class="nav-search" type="text" placeholder="Tìm kiếm..." aria-label="Tìm kiếm bài viết"/>
+    </div>
+      <div class="nav-spacer"></div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+      <svg class="hb-icon" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect class="hb-line hb-line-1" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect class="hb-line hb-line-2" y="6" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect class="hb-line hb-line-3" y="12" width="20" height="2" rx="1" fill="currentColor"/>
+      </svg>
+    </button>
+    </div>
+</nav>
+
+<!-- BLOG HERO -->
+<div class="blog-hero">
+  <div class="container">
+    <p style="font-size:11px;color:var(--text-faint);letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px;">
+      <a href="../" style="transition:color .2s;" onmouseover="this.style.color='var(--sage)'" onmouseout="this.style.color=''">Trang chủ</a>
+      <span style="opacity:.4;margin:0 5px;">›</span> Blog
+    </p>
+    <h1 class="blog-hero-title">Tất cả <em>bài viết</em></h1>
+    <p class="blog-hero-desc">Phân tích phim, kiến thức chuyên môn về đạo diễn và quay phim, review và tin tức điện ảnh quốc tế.</p>
+  </div>
+</div>
+
+<!-- FILTER TABS -->
+<div class="blog-filters">
+  <div class="filters-inner">
+    <button class="filter-btn active" onclick="filterPosts('all',this)">Tất cả</button>
+    <button class="filter-btn" onclick="filterPosts('phan-tich',this)">✍️ Phân tích phim</button>
+    <button class="filter-btn" onclick="filterPosts('ky-thuat',this)">🎥 Kỹ thuật</button>
+    <button class="filter-btn" onclick="filterPosts('review',this)">⭐ Review</button>
+    <button class="filter-btn" onclick="filterPosts('tin-tuc',this)">📰 Tin tức</button>
+    <button class="filter-btn" onclick="filterPosts('bien-kich',this)">✏️ Biên kịch</button>
+    <button class="filter-btn" onclick="filterPosts('phim-giai',this)">🏆 Phim đoạt giải</button>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div class="blog-main">
+  <div>
+
+    <!-- BÀI NỔI BẬT -->
+    <a href="phan-tich-phim/nolan-va-thoi-gian/" class="post-featured" data-cat="phan-tich">
+      <div class="post-featured-img">
+        <img src="https://i.ytimg.com/vi/ZClSZQZKe6I/maxresdefault.jpg" alt="Christopher Nolan"/>
+      </div>
+      <div class="post-featured-body">
+        <div class="post-cat cat-analysis">● Phân tích phim</div>
+        <h2 class="post-title" style="font-size:22px;margin-bottom:12px;">
+          Ngôn ngữ hình ảnh của Christopher Nolan: Khi thời gian trở thành cảm xúc
+        </h2>
+        <p class="post-excerpt">
+          Từ Memento đến Oppenheimer, Nolan không đơn thuần kể chuyện — ông xây dựng cấu trúc thời gian như một nhạc cụ, kéo khán giả vào trạng thái cảm xúc mà không lời thoại nào diễn đạt được.
+        </p>
+        <div class="post-meta">
+          <span>12 phút đọc</span><span class="sep">·</span><span>24/04/2025</span>
+          <span class="sep">·</span>
+          <span style="color:var(--sage);font-weight:600;">Đọc bài →</span>
+        </div>
+      </div>
+    </a>
+
+    <!-- GRID BÀI VIẾT -->
+    <div class="posts-grid" id="posts-grid">
+
+      <a href="phan-tich-phim/kubrick-anh-sang-tu-nhien/" class="post-card" data-cat="phan-tich">
+        <div class="post-card-img">
+          <img src="https://a.ltrbxd.com/resized/sm/upload/su/h6/e2/cr/barry-lyndon-1200-1200-675-675-crop-000000.jpg" alt="Kubrick Barry Lyndon" loading="lazy"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-analysis">● Phân tích phim</div>
+          <h3 class="post-title-sm">Kubrick và ánh sáng tự nhiên: Ống kính NASA thay đổi mãi mãi điện ảnh</h3>
+          <p class="post-excerpt" style="font-size:12px;">Loại ống kính f/0.7 NASA dùng để chụp mặt trăng — và Kubrick đã biến nó thành vũ khí nghệ thuật.</p>
+          <div class="post-meta"><span>10 phút đọc</span><span class="sep">·</span><span>22/04/2025</span></div>
+        </div>
+      </a>
+
+      <a href="phan-tich-phim/mau-sac-wes-anderson/" class="post-card" data-cat="phan-tich">
+        <div class="post-card-img">
+          <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=700&q=80" alt="Wes Anderson" loading="lazy"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-analysis">● Phân tích phim</div>
+          <h3 class="post-title-sm">Màu sắc trong phim Wes Anderson: Hệ thống màu có chủ ý đến từng khung hình</h3>
+          <p class="post-excerpt" style="font-size:12px;">Màu sắc không phải trang trí — đó là ngôn ngữ kể chuyện tinh tế nhất của Anderson.</p>
+          <div class="post-meta"><span>9 phút đọc</span><span class="sep">·</span><span>18/04/2025</span></div>
+        </div>
+      </a>
+
+      <a href="ky-thuat/shot-reverse-shot/" class="post-card" data-cat="ky-thuat">
+        <div class="post-card-img">
+          <img src="https://www.premiumbeat.com/blog/wp-content/uploads/2016/02/Shot_Reverse_Shot_Wolf.jpg" alt="Shot Reverse Shot" loading="lazy"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-tech">● Kỹ thuật quay phim</div>
+          <h3 class="post-title-sm">Shot Reverse Shot: Tại sao 90% phim Hollywood dùng kỹ thuật này</h3>
+          <p class="post-excerpt" style="font-size:12px;">Một kỹ thuật đơn giản đến mức vô hình — nhưng chính sự vô hình đó là sức mạnh của nó.</p>
+          <div class="post-meta"><span>8 phút đọc</span><span class="sep">·</span><span>20/04/2025</span></div>
+        </div>
+      </a>
+
+      <a href="#" class="post-card" data-cat="review">
+        <div class="post-card-img">
+          <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=700&q=80" alt="Sinners 2025" loading="lazy"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-review">● Review phim</div>
+          <h3 class="post-title-sm">Sinners (2025) — Khi thể loại horror tìm lại được bản năng nguyên thủy của mình</h3>
+          <p class="post-excerpt" style="font-size:12px;">Ryan Coogler đã làm điều mà ít đạo diễn dám làm: kể một câu chuyện mới bằng ngôn ngữ cũ.</p>
+          <div class="post-meta"><span>7 phút đọc</span><span class="sep">·</span><span>17/04/2025</span></div>
+        </div>
+      </a>
+
+      <a href="#" class="post-card" data-cat="phan-tich">
+        <div class="post-card-img">
+          <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=700&q=80" alt="Tarkovsky" loading="lazy"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-art">● Nghệ thuật đạo diễn</div>
+          <h3 class="post-title-sm">Tarkovsky và "thời gian bị giam cầm" — Triết học điện ảnh của thế kỷ 20</h3>
+          <div class="post-meta"><span>18 phút đọc</span><span class="sep">·</span><span>14/04/2025</span></div>
+        </div>
+      </a>
+
+      <a href="#" class="post-card" data-cat="ky-thuat">
+        <div class="post-card-img">
+          <img src="https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=700&q=80" alt="Rule of Thirds" loading="lazy"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-tech">● Kỹ thuật đạo diễn</div>
+          <h3 class="post-title-sm">Rule of Thirds: Hiểu để biết khi nào nên phá vỡ nó</h3>
+          <div class="post-meta"><span>12 phút đọc</span><span class="sep">·</span><span>15/04/2025</span></div>
+        </div>
+      </a>
+
+      <!-- Biên kịch -->
+      <a href="bien-kich/phan-tich-kich-ban-kinh-di/" class="post-card" data-cat="bien-kich">
+        <div class="post-card-img">
+          <img src="../assets/images/how-to-write-a-horror-movie.avif" alt="Cách viết kịch bản phim kinh dị" loading="lazy"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-script">● Biên kịch</div>
+          <h3 class="post-title-sm">Phân tích chi tiết cách viết một kịch bản phim kinh dị</h3>
+          <div class="post-meta"><span>15 phút đọc</span><span class="sep">·</span><span>26/04/2026</span></div>
+        </div>
+      </a>
+
+      <a href="bien-kich/tarantino-doi-thoai-pulp-fiction/" class="post-card" data-cat="bien-kich">
+        <div class="post-card-img">
+          <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2024/09/samuel-l-jackson-in-pulp-fiction-1.jpg" alt="Tarantino Pulp Fiction" loading="lazy"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-script">● Biên kịch</div>
+          <h3 class="post-title-sm">Tarantino dùng đối thoại để uy hiếp — Phân tích cảnh burger Pulp Fiction</h3>
+          <div class="post-meta"><span>9 phút đọc</span><span class="sep">·</span><span>26/04/2026</span></div>
+        </div>
+      </a>
+
+      <a href="bien-kich/viet-phim-kinh-di/" class="post-card" data-cat="bien-kich">
+        <div class="post-card-img">
+          <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=700&q=80" alt="Phim kinh dị" loading="lazy"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-script">● Biên kịch</div>
+          <h3 class="post-title-sm">Cấu trúc của sợ hãi: Cách viết kịch bản phim kinh dị</h3>
+          <div class="post-meta"><span>10 phút đọc</span><span class="sep">·</span><span>26/04/2026</span></div>
+        </div>
+      </a>
+
+      <a href="bien-kich/xung-dot-khong-ke-sai/" class="post-card" data-cat="bien-kich">
+        <div class="post-card-img">
+          <img src="https://upload.wikimedia.org/wikipedia/en/5/50/Marriage_Story_%282019_film%29.png" alt="Marriage Story 2019" loading="lazy" onerror="this.src='../assets/images/phimvakhoi-thumb-sm.svg'"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-script">● Biên kịch</div>
+          <h3 class="post-title-sm">Xung đột thật sự không có kẻ sai</h3>
+          <p class="post-excerpt" style="font-size:12px;">Khi không ai sai — đó là lý do không ai có thể dừng lại.</p>
+          <div class="post-meta"><span>8 phút đọc</span><span class="sep">·</span><span>27/04/2026</span></div>
+        </div>
+      </a>
+
+      <a href="bien-kich/ca-hai-canh-cua-la-bay/" class="post-card" data-cat="bien-kich">
+        <div class="post-card-img">
+          <img src="https://upload.wikimedia.org/wikipedia/en/a/a7/Past_Lives_%28film%29.jpg" alt="Past Lives 2023" loading="lazy" onerror="this.src='../assets/images/phimvakhoi-thumb-sm.svg'"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-script">● Biên kịch</div>
+          <h3 class="post-title-sm">Khi cả hai cánh cửa đều là bẫy — và đó mới là phim thật sự</h3>
+          <p class="post-excerpt" style="font-size:12px;">Quyết định khủng hoảng thật sự không chọn giữa đúng và sai.</p>
+          <div class="post-meta"><span>8 phút đọc</span><span class="sep">·</span><span>27/04/2026</span></div>
+        </div>
+      </a>
+
+      <a href="bien-kich/nhan-vat-nghich-ly/" class="post-card" data-cat="bien-kich">
+        <div class="post-card-img">
+          <img src="https://upload.wikimedia.org/wikipedia/en/e/e0/Joker_%282019_film%29_poster.jpg" alt="Joker 2019" loading="lazy" onerror="this.src='../assets/images/phimvakhoi-thumb-sm.svg'"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-script">● Biên kịch</div>
+          <h3 class="post-title-sm">Nhân vật của bạn không thiếu tính cách — nó thiếu nghịch lý</h3>
+          <p class="post-excerpt" style="font-size:12px;">Một thứ duy nhất đồng thời là hai thứ đối lập — và cả hai đều đúng.</p>
+          <div class="post-meta"><span>8 phút đọc</span><span class="sep">·</span><span>27/04/2026</span></div>
+        </div>
+      </a>
+
+      <!-- Phim đoạt giải -->
+      <a href="phan-tich-phim/jordan-peele-spectacle/" class="post-card" data-cat="phim-giai">
+        <div class="post-card-img">
+          <img src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=700&q=80" alt="Jordan Peele" loading="lazy"/>
+        </div>
+        <div class="post-card-body">
+          <div class="post-cat cat-award">● Phim đoạt giải</div>
+          <h3 class="post-title-sm">Jordan Peele và Duality of Spectacle — Vết sẹo của Hollywood</h3>
+          <div class="post-meta"><span>11 phút đọc</span><span class="sep">·</span><span>26/04/2026</span></div>
+        </div>
+      </a>
+
+    </div><!-- /posts-grid -->
+  </div>
+
+  <!-- SIDEBAR -->
+  <aside class="blog-sidebar">
+    <div class="sb-block">
+      <div class="sb-ttl">🔥 Đọc nhiều nhất</div>
+      <a href="phan-tich-phim/nolan-va-thoi-gian/" class="sb-post" style="display:flex;gap:10px;text-decoration:none;">
+        <div class="sb-post-img"><img src="../assets/images/phimvakhoi-thumbnail.svg" alt="Nolan"/></div>
+        <div><div class="sb-post-title">Ngôn ngữ hình ảnh của Christopher Nolan</div><div class="sb-post-meta">12 phút · 24/04</div></div>
+      </a>
+      <a href="ky-thuat/shot-reverse-shot/" class="sb-post" style="display:flex;gap:10px;text-decoration:none;">
+        <div class="sb-post-img"><img src="../assets/images/phimvakhoi-thumbnail.svg" alt="Shot"/></div>
+        <div><div class="sb-post-title">Shot Reverse Shot và Hollywood</div><div class="sb-post-meta">8 phút · 20/04</div></div>
+      </a>
+      <a href="phan-tich-phim/kubrick-anh-sang-tu-nhien/" class="sb-post" style="display:flex;gap:10px;text-decoration:none;">
+        <div class="sb-post-img"><img src="../assets/images/phimvakhoi-thumbnail.svg" alt="Kubrick"/></div>
+        <div><div class="sb-post-title">Kubrick và ống kính NASA</div><div class="sb-post-meta">10 phút · 22/04</div></div>
+      </a>
+    </div>
+
+    <div class="sb-block">
+      <div class="sb-ttl">📂 Chủ đề</div>
+      <div class="tag-cloud">
+        <span class="tag t-beige" onclick="filterPosts('phan-tich',this)">Phân tích phim</span>
+        <span class="tag t-sage" onclick="filterPosts('ky-thuat',this)">Kỹ thuật</span>
+        <span class="tag t-forest" onclick="filterPosts('review',this)">Review</span>
+        <span class="tag" style="color:#ab8beb" onclick="filterPosts('bien-kich',this)">Biên kịch</span>
+        <span class="tag" style="color:#60a5fa" onclick="filterPosts('tin-tuc',this)">Tin tức</span>
+        <span class="tag" style="color:#fbbf24" onclick="filterPosts('phim-giai',this)">Phim đoạt giải</span>
+        <span class="tag t-beige">Đạo diễn</span>
+        <span class="tag t-sage">Quay phim</span>
+        <span class="tag t-forest">Indie Film</span>
+      </div>
+    </div>
+
+    <div class="sb-block">
+      <div class="sb-ttl">📬 Nhận bài mới</div>
+      <p style="font-size:11px;color:var(--text-faint);margin-bottom:10px;font-style:italic;">Mỗi thứ Sáu một lần. Không spam.</p>
+      <input class="nl-input" type="email" placeholder="email@cua-ban.com"/>
+      <button class="nl-btn">Đăng ký</button>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div><div class="f-logo"><img src="../assets/images/phimvakhoi-logo-navbar.svg" alt="Phim &amp; Khói" /></div><p class="f-desc">Nơi điện ảnh gặp gỡ thi ca.</p></div>
+      <div><div class="f-col-ttl">Nội dung</div><ul class="f-links"><li><a href="#">Phân tích phim</a></li><li><a href="#">Kỹ thuật</a></li><li><a href="#">Review</a></li></ul></div>
+      <div><div class="f-col-ttl">Khoá học</div><ul class="f-links"><li><a href="../khoahoc/">Miễn phí</a></li><li><a href="../khoahoc/">Trả phí</a></li><li><a href="../khoahoc/index.html#truc-tiep">Workshop trực tiếp</a></li></ul></div>
+      <div><div class="f-col-ttl">Liên hệ</div><ul class="f-links"><li><a href="../ve-toi.html">Về tôi</a></li><li><a href="#">Hợp tác</a></li></ul></div>
+    </div>
+        <div class="footer-bottom">
+      <div class="f-copy">© 2026 Phim &amp; Khói · Đào Ngọc Hà</div>
+      <div class="footer-bottom-right">
+        <div class="theme-toggle">
+          <span class="theme-toggle-label">GIAO DIỆN</span>
+          <button class="theme-btn theme-btn-dark"  data-theme="dark"  onclick="setTheme('dark')"  title="Tối"  aria-label="Chế độ tối"></button>
+          <button class="theme-btn theme-btn-light" data-theme="light" onclick="setTheme('light')" title="Sáng" aria-label="Chế độ sáng"></button>
+        </div>
+        <div class="f-social">
+        <a href="#" class="soc-btn" title="YouTube" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="Facebook" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1c0 6 4.4 11 10.1 11.9v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.3l-.5 3.5h-2.8V24C19.6 23.1 24 18.1 24 12.1z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="Instagram" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="TikTok" aria-label="TikTok">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 3.3A4.5 4.5 0 0 1 15.2 0h-3.3v16.6a2.7 2.7 0 0 1-2.7 2.5 2.7 2.7 0 0 1-2.7-2.7 2.7 2.7 0 0 1 2.7-2.7c.3 0 .5 0 .8.1V10.4a6 6 0 0 0-.8-.1 6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6V8.2a7.8 7.8 0 0 0 4.4 1.3V6.2a4.5 4.5 0 0 1-2.1-.9z"/></svg>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function filterPosts(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  document.querySelectorAll('.post-card, .post-featured').forEach(el => {
+    el.style.display = (cat === 'all' || el.dataset.cat === cat) ? '' : 'none';
+  });
+}
+</script>
+<script src="../assets/js/articles.js"></script>
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/theme.js"></script>
+</body>
+</html>

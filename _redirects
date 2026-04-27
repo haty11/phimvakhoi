@@ -1,0 +1,13 @@
+# Redirect /path/index.html → /path/ (301 permanent)
+/index.html                                                          /                                                               301
+/blog/index.html                                                     /blog/                                                          301
+/khoahoc/index.html                                                  /khoahoc/                                                       301
+/truc-tiep/index.html                                                /truc-tiep/                                                     301
+/blog/phan-tich-phim/nolan-va-thoi-gian/index.html                  /blog/phan-tich-phim/nolan-va-thoi-gian/                        301
+/blog/phan-tich-phim/mau-sac-wes-anderson/index.html                /blog/phan-tich-phim/mau-sac-wes-anderson/                      301
+/blog/phan-tich-phim/kubrick-anh-sang-tu-nhien/index.html           /blog/phan-tich-phim/kubrick-anh-sang-tu-nhien/                 301
+/blog/phan-tich-phim/jordan-peele-spectacle/index.html              /blog/phan-tich-phim/jordan-peele-spectacle/                    301
+/blog/ky-thuat/shot-reverse-shot/index.html                         /blog/ky-thuat/shot-reverse-shot/                               301
+/blog/bien-kich/tarantino-doi-thoai-pulp-fiction/index.html         /blog/bien-kich/tarantino-doi-thoai-pulp-fiction/               301
+/blog/bien-kich/viet-phim-kinh-di/index.html                        /blog/bien-kich/viet-phim-kinh-di/                              301
+/blog/bien-kich/phan-tich-kich-ban-kinh-di/index.html               /blog/bien-kich/phan-tich-kich-ban-kinh-di/                     301

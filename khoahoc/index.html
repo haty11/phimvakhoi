@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<script>(function(){var t=localStorage.getItem('pvk-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khoá học — Phim & Khói</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Khoá học Điện ảnh — Phim & Khói",
+    "description": "Danh sách khoá học điện ảnh online bằng tiếng Việt: phân tích phim, kỹ thuật quay phim, color grading, viết kịch bản.",
+    "url": "https://phimvakhoi.com/khoahoc/",
+    "numberOfItems": 7,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "Course",
+          "name": "Nhập môn Phân tích Phim",
+          "description": "Khoá học miễn phí giúp bạn hiểu ngôn ngữ điện ảnh cơ bản — ánh sáng, góc máy, montage, âm thanh.",
+          "provider": { "@type": "Organization", "name": "Phim & Khói" },
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "VND" },
+          "inLanguage": "vi"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "Course",
+          "name": "Viết kịch bản từ A-Z",
+          "description": "Khoá học viết kịch bản phim từ ý tưởng đến bản hoàn chỉnh. Cấu trúc, nhân vật, đối thoại.",
+          "provider": { "@type": "Organization", "name": "Phim & Khói" },
+          "offers": { "@type": "Offer", "price": "599000", "priceCurrency": "VND" },
+          "inLanguage": "vi"
+        }
+      }
+    ],
+    "provider": {
+      "@type": "Organization",
+      "name": "Phim & Khói",
+      "url": "https://phimvakhoi.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Đào Ngọc Hà",
+        "jobTitle": "Đạo diễn, Giảng viên điện ảnh"
+      }
+    }
+  }
+  </script>
+  <meta name="description" content="Khoá học điện ảnh online bằng tiếng Việt — từ nhập môn phân tích phim, kỹ thuật quay phim, color grading đến viết kịch bản. Miễn phí và trả phí."/>
+  <meta name="keywords" content="khoá học điện ảnh, học làm phim online, phân tích phim, quay phim, kịch bản, color grading, Việt Nam"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://phimvakhoi.com/khoahoc/"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Khoá học Điện ảnh — Phim & Khói"/>
+  <meta property="og:description" content="Học làm phim và phân tích điện ảnh bằng tiếng Việt. Khoá miễn phí và trả phí dành cho người yêu phim."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1478720568477-152d9b8a8de7?w=1200&q=85"/>
+  <meta property="og:site_name" content="Phim &amp; Khói"/>
+  <meta property="og:locale" content="vi_VN"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Khoá học Điện ảnh — Phim & Khói"/>
+  <meta name="twitter:description" content="Học làm phim và phân tích điện ảnh bằng tiếng Việt. Khoá miễn phí và trả phí dành cho người yêu phim."/>
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1478720568477-152d9b8a8de7?w=1200&q=85"/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+
+  <style>
+    /* ── KHOÁ HỌC PAGE ── */
+    .kh-hero {
+      background: var(--bg-deep);
+      border-bottom: 1px solid var(--border);
+      padding: 72px 24px 64px;
+      text-align: center;
+    }
+    .kh-hero-eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--sage); margin-bottom: 16px;
+    }
+    .kh-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 46px; font-weight: 900;
+      color: var(--beige); line-height: 1.15;
+      margin-bottom: 16px;
+    }
+    .kh-hero-title em { font-style: italic; color: var(--sage); }
+    .kh-hero-desc {
+      font-size: 15px; color: var(--text-dim);
+      max-width: 560px; margin: 0 auto 32px; line-height: 1.75;
+    }
+    .kh-hero-stats {
+      display: flex; justify-content: center; gap: 48px;
+      border-top: 1px solid var(--border);
+      padding-top: 28px; margin-top: 28px;
+    }
+    .kh-stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px; font-weight: 700; color: var(--beige);
+      margin-bottom: 4px;
+    }
+    .kh-stat-lbl { font-size: 11px; color: var(--text-faint); letter-spacing: .06em; text-transform: uppercase; }
+
+    /* Filter tabs */
+    .kh-tabs {
+      background: var(--bg-deep);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 58px; z-index: 90;
+    }
+    .kh-tabs-inner {
+      max-width: var(--max-w); margin: 0 auto; padding: 0 24px;
+      display: flex; gap: 4px; overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .kh-tabs-inner::-webkit-scrollbar { display: none; }
+    .kh-tab {
+      padding: 14px 18px;
+      font-size: 12px; font-weight: 600; letter-spacing: .05em;
+      color: var(--text-dim); cursor: pointer;
+      border-bottom: 2px solid transparent;
+      white-space: nowrap; transition: color .2s, border-color .2s;
+      background: none; border-top: none; border-left: none; border-right: none;
+      font-family: 'Inter', sans-serif;
+    }
+    .kh-tab:hover { color: var(--beige); }
+    .kh-tab.active { color: var(--sage); border-bottom-color: var(--sage); }
+
+    /* Main layout */
+    .kh-main {
+      max-width: var(--max-w); margin: 0 auto;
+      padding: 48px 24px;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 48px; align-items: start;
+    }
+
+    /* Section */
+    .kh-section { margin-bottom: 52px; }
+    .kh-section-header {
+      display: flex; align-items: center; gap: 14px;
+      margin-bottom: 24px;
+    }
+    .kh-section-icon {
+      width: 38px; height: 38px; border-radius: 8px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; flex-shrink: 0;
+    }
+    .kh-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700; color: var(--beige);
+    }
+    .kh-section-badge {
+      font-size: 10px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; padding: 3px 10px; border-radius: 12px;
+      margin-left: auto; flex-shrink: 0;
+    }
+    .badge-free  { background: rgba(98,129,65,.2);  color: var(--sage); }
+    .badge-paid  { background: rgba(235,213,171,.1); color: var(--beige); }
+    .badge-new   { background: rgba(98,129,65,.3);  color: var(--sage); }
+
+    /* Course card */
+    .course-card {
+      display: flex; gap: 20px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 6px; padding: 22px 24px;
+      margin-bottom: 14px; text-decoration: none;
+      transition: border-color .2s, background .2s;
+      cursor: pointer;
+    }
+    .course-card:hover { border-color: var(--forest); background: var(--bg-hover); }
+    .course-thumb {
+      width: 72px; height: 72px; border-radius: 8px;
+      background: var(--bg-deep); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 28px; flex-shrink: 0;
+    }
+    .course-info { flex: 1; min-width: 0; }
+    .course-cat {
+      font-size: 10px; font-weight: 700; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--sage); margin-bottom: 6px;
+    }
+    .course-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; font-weight: 700; color: var(--beige);
+      margin-bottom: 6px; line-height: 1.35;
+    }
+    .course-card:hover .course-title { color: var(--sage); }
+    .course-desc {
+      font-size: 12px; color: var(--text-dim);
+      line-height: 1.65; margin-bottom: 12px;
+    }
+    .course-meta {
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+    }
+    .course-meta-item {
+      font-size: 11px; color: var(--text-faint);
+      display: flex; align-items: center; gap: 4px;
+    }
+    .course-price {
+      margin-left: auto; text-align: right; flex-shrink: 0;
+    }
+    .price-tag {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700; color: var(--beige);
+      display: block; margin-bottom: 2px;
+    }
+    .price-tag.free { color: var(--sage); }
+    .price-label { font-size: 10px; color: var(--text-faint); }
+
+    /* Featured / banner */
+    .kh-banner {
+      background: linear-gradient(135deg, var(--forest) 0%, #3d5228 100%);
+      border-radius: 8px; padding: 32px 36px;
+      margin-bottom: 52px; position: relative; overflow: hidden;
+    }
+    .kh-banner::before {
+      content: '🎬';
+      position: absolute; right: 24px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 80px; opacity: .15;
+    }
+    .kh-banner-eyebrow {
+      font-size: 10px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: rgba(235,213,171,.7);
+      margin-bottom: 10px;
+    }
+    .kh-banner-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px; font-weight: 900; color: var(--beige);
+      margin-bottom: 10px; line-height: 1.25;
+    }
+    .kh-banner-desc {
+      font-size: 13px; color: rgba(235,213,171,.75);
+      line-height: 1.65; margin-bottom: 20px; max-width: 480px;
+    }
+    .kh-banner-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--beige); color: var(--bg-deep);
+      font-size: 12px; font-weight: 700; letter-spacing: .07em;
+      text-transform: uppercase; padding: 10px 22px;
+      border-radius: 3px; text-decoration: none;
+      transition: background .2s;
+    }
+    .kh-banner-btn:hover { background: #fff; }
+
+    /* Sidebar */
+    .kh-sb-block {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 6px; padding: 20px 22px; margin-bottom: 20px;
+    }
+    .kh-sb-ttl {
+      font-size: 10px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--forest); margin-bottom: 16px;
+    }
+    .kh-path-item {
+      display: flex; gap: 12px; margin-bottom: 14px;
+      padding-bottom: 14px; border-bottom: 1px solid var(--border);
+    }
+    .kh-path-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .kh-path-num {
+      width: 22px; height: 22px; border-radius: 50%;
+      background: var(--forest); color: var(--beige);
+      font-size: 11px; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; margin-top: 1px;
+    }
+    .kh-path-text { font-size: 12px; color: var(--text); line-height: 1.6; }
+    .kh-path-text strong { color: var(--beige); display: block; margin-bottom: 2px; font-size: 12px; }
+    .kh-path-free { font-size: 10px; color: var(--sage); font-weight: 700; }
+    .kh-path-paid { font-size: 10px; color: var(--beige); font-weight: 700; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .kh-main { grid-template-columns: 1fr; }
+      .kh-hero-title { font-size: 32px; }
+      .kh-hero-stats { gap: 28px; }
+    }
+    @media (max-width: 640px) {
+      .kh-hero { padding: 48px 16px 44px; }
+      .kh-hero-title { font-size: 26px; }
+      .kh-main { padding: 32px 16px; }
+      .course-card { flex-direction: column; gap: 14px; }
+      .course-price { margin-left: 0; text-align: left; }
+      .kh-hero-stats { flex-wrap: wrap; gap: 20px; justify-content: flex-start; padding-left: 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../" class="nav-logo">Phim <span class="amp">&</span> Khói</a>
+    <div class="nav-links">
+      <a href="../">Trang chủ</a>
+      <a href="../blog/">Blog</a>
+      <a href="./" class="active">Khoá học</a>
+      <a href="../ve-toi.html">Về tôi</a>
+    </div>
+    <div class="nav-search-wrap">
+      <span class="nav-search-icon">🔍</span>
+      <input class="nav-search" type="text" placeholder="Tìm kiếm..." aria-label="Tìm kiếm bài viết"/>
+    </div>
+      <div class="nav-spacer"></div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+      <svg class="hb-icon" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect class="hb-line hb-line-1" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect class="hb-line hb-line-2" y="6" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect class="hb-line hb-line-3" y="12" width="20" height="2" rx="1" fill="currentColor"/>
+      </svg>
+    </button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="kh-hero">
+  <div class="kh-hero-eyebrow">● Khoá học online</div>
+  <h1 class="kh-hero-title">Học điện ảnh<br><em>theo cách của bạn</em></h1>
+  <p class="kh-hero-desc">Từ phân tích phim đến kỹ thuật quay phim và viết kịch bản — tất cả bằng tiếng Việt, học theo tốc độ của riêng bạn.</p>
+  <div class="kh-hero-stats">
+    <div>
+      <div class="kh-stat-num">8</div>
+      <div class="kh-stat-lbl">Khoá học</div>
+    </div>
+    <div>
+      <div class="kh-stat-num">40+</div>
+      <div class="kh-stat-lbl">Bài học</div>
+    </div>
+    <div>
+      <div class="kh-stat-num">18h</div>
+      <div class="kh-stat-lbl">Nội dung video</div>
+    </div>
+    <div>
+      <div class="kh-stat-num">2</div>
+      <div class="kh-stat-lbl">Khoá miễn phí</div>
+    </div>
+  </div>
+</div>
+
+<!-- FILTER TABS -->
+<div class="kh-tabs">
+  <div class="kh-tabs-inner">
+    <button class="kh-tab active" onclick="filterCourses('all',this)">Tất cả</button>
+    <button class="kh-tab" onclick="filterCourses('mien-phi',this)">🎁 Miễn phí</button>
+    <button class="kh-tab" onclick="filterCourses('phan-tich',this)">🎬 Phân tích phim</button>
+    <button class="kh-tab" onclick="filterCourses('ky-thuat',this)">🎥 Kỹ thuật</button>
+    <button class="kh-tab" onclick="filterCourses('bien-kich',this)">✍️ Biên kịch</button>
+    <button class="kh-tab" onclick="filterCourses('dien-xuat',this)">🎭 Diễn xuất</button>
+  </div>
+</div>
+
+<div class="kh-main">
+  <div>
+
+    <!-- BANNER: Khoá trực tiếp -->
+    <div class="kh-banner">
+      <div class="kh-banner-eyebrow">🔴 Đang mở đăng ký</div>
+      <div class="kh-banner-title">Khoá học trực tiếp cùng<br>đạo diễn Đào Ngọc Hà</div>
+      <div class="kh-banner-desc">Học theo nhóm nhỏ, có phản hồi trực tiếp, thực hành ngay trong buổi học. Số lượng có hạn — ưu tiên đăng ký sớm.</div>
+      <a href="../truc-tiep/" class="kh-banner-btn">Xem chi tiết →</a>
+    </div>
+
+    <!-- FREE COURSES -->
+    <div class="kh-section" data-cat="mien-phi">
+      <div class="kh-section-header">
+        <div class="kh-section-icon">🎁</div>
+        <div class="kh-section-title">Khoá học miễn phí</div>
+        <span class="kh-section-badge badge-free">Miễn phí</span>
+      </div>
+
+      <a href="#" class="course-card" data-cat="mien-phi phan-tich">
+        <div class="course-thumb">🎬</div>
+        <div class="course-info">
+          <div class="course-cat">Phân tích phim · Miễn phí</div>
+          <div class="course-title">Nhập môn Phân tích Phim — Xem phim khác đi mãi mãi</div>
+          <div class="course-desc">Học cách đọc một bộ phim như một đạo diễn: nhận ra ngôn ngữ hình ảnh, cấu trúc tường thuật và những lựa chọn có chủ ý ẩn sau mỗi cú máy.</div>
+          <div class="course-meta">
+            <span class="course-meta-item">▶ 12 bài học</span>
+            <span class="course-meta-item">⏱ 3 giờ 20 phút</span>
+            <span class="course-meta-item">📶 Mọi trình độ</span>
+          </div>
+        </div>
+        <div class="course-price">
+          <span class="price-tag free">Miễn phí</span>
+          <span class="price-label">Truy cập ngay</span>
+        </div>
+      </a>
+
+      <a href="#" class="course-card" data-cat="mien-phi bien-kich">
+        <div class="course-thumb">✍️</div>
+        <div class="course-info">
+          <div class="course-cat">Biên kịch · Miễn phí</div>
+          <div class="course-title">3 Hồi Kịch — Cấu trúc nền tảng của mọi câu chuyện hay</div>
+          <div class="course-desc">Tại sao hầu hết phim Hollywood đều theo cấu trúc 3 hồi? Khoá học ngắn giải thích từ lý thuyết đến ví dụ thực tế, ứng dụng ngay được.</div>
+          <div class="course-meta">
+            <span class="course-meta-item">▶ 6 bài học</span>
+            <span class="course-meta-item">⏱ 1 giờ 30 phút</span>
+            <span class="course-meta-item">📶 Mọi trình độ</span>
+          </div>
+        </div>
+        <div class="course-price">
+          <span class="price-tag free">Miễn phí</span>
+          <span class="price-label">Truy cập ngay</span>
+        </div>
+      </a>
+    </div>
+
+    <!-- PAID COURSES -->
+    <div class="kh-section">
+      <div class="kh-section-header">
+        <div class="kh-section-icon">🎥</div>
+        <div class="kh-section-title">Kỹ thuật quay phim</div>
+      </div>
+
+      <a href="#" class="course-card" data-cat="ky-thuat">
+        <div class="course-thumb">🎥</div>
+        <div class="course-info">
+          <div class="course-cat">Kỹ thuật · Có phí</div>
+          <div class="course-title">Kỹ thuật Quay phim Cơ bản — Từ máy ảnh đến ngôn ngữ hình ảnh</div>
+          <div class="course-desc">Framing, composition, di chuyển máy, ánh sáng cơ bản — từng kỹ thuật được giải thích bằng ví dụ phim thật và bài tập thực hành.</div>
+          <div class="course-meta">
+            <span class="course-meta-item">▶ 18 bài học</span>
+            <span class="course-meta-item">⏱ 5 giờ 10 phút</span>
+            <span class="course-meta-item">📶 Cơ bản → Trung cấp</span>
+          </div>
+        </div>
+        <div class="course-price">
+          <span class="price-tag">299.000đ</span>
+          <span class="price-label">Trọn đời</span>
+        </div>
+      </a>
+
+      <a href="#" class="course-card" data-cat="ky-thuat">
+        <div class="course-thumb">🎨</div>
+        <div class="course-info">
+          <div class="course-cat">Kỹ thuật · Có phí</div>
+          <div class="course-title">Color Grading cho Indie Film — Tạo màu sắc có chủ ý</div>
+          <div class="course-desc">Hiểu màu sắc như Wes Anderson, tạo look phim nhất quán với DaVinci Resolve. Dành cho filmmaker muốn nâng tầm hình ảnh mà không cần ngân sách lớn.</div>
+          <div class="course-meta">
+            <span class="course-meta-item">▶ 10 bài học</span>
+            <span class="course-meta-item">⏱ 2 giờ 45 phút</span>
+            <span class="course-meta-item">📶 Trung cấp</span>
+          </div>
+        </div>
+        <div class="course-price">
+          <span class="price-tag">499.000đ</span>
+          <span class="price-label">Trọn đời</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="kh-section">
+      <div class="kh-section-header">
+        <div class="kh-section-icon">✍️</div>
+        <div class="kh-section-title">Biên kịch & Đạo diễn</div>
+      </div>
+
+      <a href="#" class="course-card" data-cat="bien-kich">
+        <div class="course-thumb">📝</div>
+        <div class="course-info">
+          <div class="course-cat">Biên kịch · Có phí</div>
+          <div class="course-title">Viết kịch bản từ A đến Z — Từ ý tưởng đến trang đầu tiên</div>
+          <div class="course-desc">Format kịch bản chuẩn quốc tế, xây dựng nhân vật, tạo conflict, viết dialogue tự nhiên. Có feedback trực tiếp cho bài tập của học viên.</div>
+          <div class="course-meta">
+            <span class="course-meta-item">▶ 22 bài học</span>
+            <span class="course-meta-item">⏱ 6 giờ 30 phút</span>
+            <span class="course-meta-item">✅ Có feedback bài tập</span>
+          </div>
+        </div>
+        <div class="course-price">
+          <span class="price-tag">599.000đ</span>
+          <span class="price-label">Trọn đời + feedback</span>
+        </div>
+      </a>
+
+      <a href="#" class="course-card" data-cat="bien-kich phan-tich">
+        <div class="course-thumb">🎭</div>
+        <div class="course-info">
+          <div class="course-cat">Đạo diễn · Có phí</div>
+          <div class="course-title">Ngôn ngữ Đạo diễn — Nói chuyện với diễn viên và máy quay</div>
+          <div class="course-desc">Đạo diễn không chỉ là "chỉ huy" — đó là nghệ thuật giao tiếp bằng hình ảnh và cảm xúc. Khoá học dành cho ai muốn bước vào ghế đạo diễn lần đầu.</div>
+          <div class="course-meta">
+            <span class="course-meta-item">▶ 14 bài học</span>
+            <span class="course-meta-item">⏱ 4 giờ 00 phút</span>
+            <span class="course-meta-item">📶 Mọi trình độ</span>
+          </div>
+        </div>
+        <div class="course-price">
+          <span class="price-tag">449.000đ</span>
+          <span class="price-label">Trọn đời</span>
+        </div>
+      </a>
+    </div>
+
+    <div class="kh-section">
+      <div class="kh-section-header">
+        <div class="kh-section-icon">🎭</div>
+        <div class="kh-section-title">Diễn xuất</div>
+      </div>
+
+      <a href="#" class="course-card" data-cat="dien-xuat">
+        <div class="course-thumb">🎭</div>
+        <div class="course-info">
+          <div class="course-cat">Diễn xuất · Có phí · <span style="color:var(--sage)">Sắp ra mắt</span></div>
+          <div class="course-title">Diễn xuất trước máy quay — Khác gì sân khấu?</div>
+          <div class="course-desc">Sân khấu và điện ảnh đòi hỏi hai loại diễn xuất hoàn toàn khác nhau. Khoá học phân tích sự khác biệt, với bài học từ phương pháp Stanislavski đến kỹ thuật phim hiện đại.</div>
+          <div class="course-meta">
+            <span class="course-meta-item">▶ ~16 bài học</span>
+            <span class="course-meta-item">⏱ ~5 giờ</span>
+            <span class="course-meta-item">🔔 Đang sản xuất</span>
+          </div>
+        </div>
+        <div class="course-price">
+          <span class="price-tag" style="font-size:14px;color:var(--sage)">Sắp ra</span>
+          <span class="price-label">Đăng ký nhận thông báo</span>
+        </div>
+      </a>
+    </div>
+
+  </div><!-- /left col -->
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="kh-sb-block">
+      <div class="kh-sb-ttl">🗺 Lộ trình học</div>
+      <div class="kh-path-item">
+        <div class="kh-path-num">1</div>
+        <div class="kh-path-text">
+          <strong>Nhập môn Phân tích Phim</strong>
+          Bắt đầu từ đây — hiểu điện ảnh là gì
+          <span class="kh-path-free">Miễn phí</span>
+        </div>
+      </div>
+      <div class="kh-path-item">
+        <div class="kh-path-num">2</div>
+        <div class="kh-path-text">
+          <strong>3 Hồi Kịch</strong>
+          Cấu trúc câu chuyện cơ bản
+          <span class="kh-path-free">Miễn phí</span>
+        </div>
+      </div>
+      <div class="kh-path-item">
+        <div class="kh-path-num">3</div>
+        <div class="kh-path-text">
+          <strong>Kỹ thuật Quay phim Cơ bản</strong>
+          Ngôn ngữ hình ảnh thực tế
+          <span class="kh-path-paid">299.000đ</span>
+        </div>
+      </div>
+      <div class="kh-path-item">
+        <div class="kh-path-num">4</div>
+        <div class="kh-path-text">
+          <strong>Viết kịch bản từ A đến Z</strong>
+          Kể câu chuyện của bạn
+          <span class="kh-path-paid">599.000đ</span>
+        </div>
+      </div>
+      <div class="kh-path-item">
+        <div class="kh-path-num">5</div>
+        <div class="kh-path-text">
+          <strong>Khoá trực tiếp</strong>
+          Học cùng đạo diễn, phản hồi trực tiếp
+          <span class="kh-path-paid">Liên hệ</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kh-sb-block">
+      <div class="kh-sb-ttl">❓ Câu hỏi thường gặp</div>
+      <div style="font-size:12px;color:var(--text);line-height:1.7;">
+        <p style="margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border);">
+          <strong style="color:var(--beige);display:block;margin-bottom:4px;">Học trên thiết bị nào?</strong>
+          Mọi thiết bị — điện thoại, máy tính bảng, laptop. Không cần cài ứng dụng.
+        </p>
+        <p style="margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border);">
+          <strong style="color:var(--beige);display:block;margin-bottom:4px;">Có hạn học không?</strong>
+          Không. Mua một lần, xem trọn đời. Bao gồm cả cập nhật nội dung trong tương lai.
+        </p>
+        <p style="margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid var(--border);">
+          <strong style="color:var(--beige);display:block;margin-bottom:4px;">Cần kiến thức gì trước?</strong>
+          Không cần gì cả — chỉ cần yêu phim. Các khoá từ nhập môn đến nâng cao.
+        </p>
+        <p>
+          <strong style="color:var(--beige);display:block;margin-bottom:4px;">Hoàn tiền không?</strong>
+          Hỗ trợ hoàn tiền trong 7 ngày nếu không hài lòng, không hỏi lý do.
+        </p>
+      </div>
+    </div>
+
+    <div class="kh-sb-block">
+      <div class="kh-sb-ttl">📬 Nhận thông báo khoá mới</div>
+      <p style="font-size:11px;color:var(--text-faint);margin-bottom:10px;font-style:italic;">Được báo trước khi khoá ra mắt.</p>
+      <input class="nl-input" type="email" placeholder="email@cua-ban.com"/>
+      <button class="nl-btn" style="margin-top:8px;width:100%;">Đăng ký</button>
+    </div>
+  </aside>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div><div class="f-logo">Phim <span class="amp">&</span> Khói</div><p class="f-desc">Nơi điện ảnh gặp gỡ thi ca.</p></div>
+      <div><div class="f-col-ttl">Nội dung</div><ul class="f-links"><li><a href="../blog/">Blog</a></li></ul></div>
+      <div><div class="f-col-ttl">Khoá học</div><ul class="f-links"><li><a href="./">Tất cả khoá học</a></li><li><a href="../truc-tiep/">Khoá trực tiếp</a></li></ul></div>
+      <div><div class="f-col-ttl">Liên hệ</div><ul class="f-links"><li><a href="../ve-toi.html">Về tôi</a></li><li><a href="mailto:highcomedia@gmail.com">Email</a></li></ul></div>
+    </div>
+        <div class="footer-bottom">
+      <div class="f-copy">© 2026 Phim &amp; Khói · Đào Ngọc Hà</div>
+      <div class="footer-bottom-right">
+        <div class="theme-toggle">
+          <span class="theme-toggle-label">GIAO DIỆN</span>
+          <button class="theme-btn theme-btn-dark"  data-theme="dark"  onclick="setTheme('dark')"  title="Tối"  aria-label="Chế độ tối"></button>
+          <button class="theme-btn theme-btn-light" data-theme="light" onclick="setTheme('light')" title="Sáng" aria-label="Chế độ sáng"></button>
+        </div>
+        <div class="f-social">
+        <a href="#" class="soc-btn" title="YouTube" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="Facebook" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1c0 6 4.4 11 10.1 11.9v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.3l-.5 3.5h-2.8V24C19.6 23.1 24 18.1 24 12.1z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="Instagram" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="TikTok" aria-label="TikTok">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 3.3A4.5 4.5 0 0 1 15.2 0h-3.3v16.6a2.7 2.7 0 0 1-2.7 2.5 2.7 2.7 0 0 1-2.7-2.7 2.7 2.7 0 0 1 2.7-2.7c.3 0 .5 0 .8.1V10.4a6 6 0 0 0-.8-.1 6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6V8.2a7.8 7.8 0 0 0 4.4 1.3V6.2a4.5 4.5 0 0 1-2.1-.9z"/></svg>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+function filterCourses(cat, btn) {
+  document.querySelectorAll('.kh-tab').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.course-card').forEach(el => {
+    if (cat === 'all') { el.style.display = ''; return; }
+    el.style.display = (el.dataset.cat && el.dataset.cat.includes(cat)) ? '' : 'none';
+  });
+  // Hide empty sections
+  document.querySelectorAll('.kh-section').forEach(sec => {
+    if (cat === 'all') { sec.style.display = ''; return; }
+    const visible = [...sec.querySelectorAll('.course-card')].some(c => c.style.display !== 'none');
+    sec.style.display = visible ? '' : 'none';
+  });
+}
+</script>
+<script src="../assets/js/articles.js"></script>
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/theme.js"></script>
+</body>
+</html>

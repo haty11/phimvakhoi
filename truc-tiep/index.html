@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<script>(function(){var t=localStorage.getItem('pvk-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Khoá Trực Tiếp — Phim & Khói</title>
+  <meta name="description" content="Workshop điện ảnh trực tiếp tại Hà Nội — phân tích phim, diễn xuất, viết kịch bản theo nhóm nhỏ, có tương tác với giảng viên Đào Ngọc Hà."/>
+  <meta name="keywords" content="workshop điện ảnh, khoá học trực tiếp phim, học làm phim Hà Nội, phân tích phim offline, diễn xuất, kịch bản phim Việt Nam"/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://phimvakhoi.com/truc-tiep/"/>
+
+  <meta property="og:type" content="website"/>
+  <meta property="og:title" content="Khoá Trực Tiếp — Phim & Khói"/>
+  <meta property="og:description" content="Workshop điện ảnh offline tại Hà Nội. Nhóm nhỏ, tương tác sâu, thực hành ngay tại lớp."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&q=85"/>
+  <meta property="og:site_name" content="Phim &amp; Khói"/>
+  <meta property="og:locale" content="vi_VN"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Khoá Trực Tiếp — Workshop Điện ảnh Hà Nội"/>
+  <meta name="twitter:description" content="Workshop điện ảnh offline tại Hà Nội. Nhóm nhỏ ≤12 người, thực hành ngay tại lớp, tương tác trực tiếp với giảng viên Đào Ngọc Hà."/>
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=1200&q=85"/>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationEvent",
+    "name": "Khoá Trực Tiếp — Phim & Khói",
+    "description": "Workshop điện ảnh trực tiếp tại Hà Nội do Đào Ngọc Hà giảng dạy",
+    "url": "https://phimvakhoi.com/truc-tiep/",
+    "organizer": {
+      "@type": "Organization",
+      "name": "Phim & Khói",
+      "url": "https://phimvakhoi.com"
+    },
+    "instructor": {
+      "@type": "Person",
+      "name": "Đào Ngọc Hà",
+      "jobTitle": "Đạo diễn, Giảng viên điện ảnh"
+    },
+    "location": {
+      "@type": "Place",
+      "name": "Hà Nội, Việt Nam"
+    }
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../assets/css/style.css"/>
+
+  <style>
+    /* ── TRỰC TIẾP PAGE ── */
+    .tt-hero {
+      background: var(--bg-deep);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 24px 72px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .tt-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(98,129,65,.15) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .tt-hero-eyebrow {
+      font-size: 11px; font-weight: 700; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--sage); margin-bottom: 16px;
+      display: flex; align-items: center; justify-content: center; gap: 8px;
+    }
+    .tt-hero-eyebrow::before, .tt-hero-eyebrow::after {
+      content: ''; display: block; width: 28px; height: 1px; background: var(--sage); opacity: .5;
+    }
+    .tt-hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 50px; font-weight: 900;
+      color: var(--beige); line-height: 1.12;
+      margin-bottom: 16px;
+    }
+    .tt-hero-title em { font-style: italic; color: var(--sage); }
+    .tt-hero-desc {
+      font-size: 16px; color: var(--text-dim);
+      max-width: 580px; margin: 0 auto 36px; line-height: 1.8;
+    }
+    .tt-hero-badges {
+      display: flex; justify-content: center; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 40px;
+    }
+    .tt-hero-badge {
+      background: rgba(98,129,65,.15);
+      border: 1px solid rgba(98,129,65,.3);
+      color: var(--sage);
+      font-size: 12px; font-weight: 600; letter-spacing: .04em;
+      padding: 6px 14px; border-radius: 20px;
+    }
+    .tt-hero-cta {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--forest); color: var(--beige);
+      padding: 14px 32px; border-radius: 4px;
+      font-size: 14px; font-weight: 700; letter-spacing: .04em;
+      text-decoration: none; transition: background .2s, transform .15s;
+    }
+    .tt-hero-cta:hover { background: var(--sage); transform: translateY(-1px); }
+
+    /* Live indicator */
+    .live-dot {
+      display: inline-block; width: 8px; height: 8px;
+      background: #ef4444; border-radius: 50%;
+      animation: pulse-red 1.5s ease-in-out infinite;
+    }
+    @keyframes pulse-red {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: .5; transform: scale(1.3); }
+    }
+
+    /* ── WORKSHOP CARDS ── */
+    .tt-section {
+      max-width: var(--max-w); margin: 0 auto;
+      padding: 64px 24px;
+    }
+    .tt-section-label {
+      font-size: 11px; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--sage);
+      margin-bottom: 12px;
+    }
+    .tt-section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 30px; font-weight: 700; color: var(--beige);
+      margin-bottom: 8px;
+    }
+    .tt-section-sub {
+      font-size: 14px; color: var(--text-faint); margin-bottom: 40px; line-height: 1.65;
+    }
+
+    .tt-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 24px; margin-bottom: 48px;
+    }
+    @media (max-width: 720px) { .tt-grid { grid-template-columns: 1fr; } }
+
+    .tt-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: border-color .2s, transform .15s;
+      display: flex; flex-direction: column;
+    }
+    .tt-card:hover {
+      border-color: rgba(98,129,65,.45);
+      transform: translateY(-2px);
+    }
+    .tt-card-img {
+      width: 100%; height: 200px; object-fit: cover;
+      display: block; filter: brightness(.85);
+    }
+    .tt-card-body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
+    .tt-card-meta {
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 12px;
+    }
+    .tt-card-tag {
+      font-size: 10px; font-weight: 700; letter-spacing: .08em;
+      text-transform: uppercase; padding: 3px 9px; border-radius: 3px;
+    }
+    .tag-open { background: rgba(98,129,65,.2); color: var(--sage); }
+    .tag-coming { background: rgba(235,213,171,.1); color: var(--beige); opacity: .6; }
+    .tag-full { background: rgba(239,68,68,.1); color: #f87171; }
+    .tt-card-date {
+      font-size: 11px; color: var(--text-faint); letter-spacing: .04em;
+    }
+    .tt-card-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; font-weight: 700; color: var(--beige);
+      margin-bottom: 8px; line-height: 1.3;
+    }
+    .tt-card-desc {
+      font-size: 13.5px; color: var(--text-dim);
+      line-height: 1.7; margin-bottom: 20px; flex: 1;
+    }
+    .tt-card-info {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .tt-info-item {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 12px; color: var(--text-faint);
+    }
+    .tt-info-item svg { flex-shrink: 0; }
+    .tt-card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      border-top: 1px solid var(--border); padding-top: 16px;
+    }
+    .tt-card-price {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px; font-weight: 700; color: var(--beige);
+    }
+    .tt-card-price span {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px; font-weight: 400; color: var(--text-faint);
+      display: block; margin-top: 2px;
+    }
+    .tt-card-btn {
+      padding: 9px 20px;
+      background: var(--forest); color: var(--beige);
+      font-size: 12px; font-weight: 700; letter-spacing: .05em;
+      border-radius: 4px; text-decoration: none;
+      transition: background .2s;
+    }
+    .tt-card-btn:hover { background: var(--sage); }
+    .tt-card-btn.disabled {
+      background: var(--border); color: var(--text-faint);
+      cursor: not-allowed; pointer-events: none;
+    }
+
+    /* Featured / Full-width card */
+    .tt-card-featured {
+      grid-column: 1 / -1;
+      flex-direction: row;
+    }
+    .tt-card-featured .tt-card-img {
+      width: 340px; height: auto; flex-shrink: 0; border-radius: 0;
+    }
+    @media (max-width: 720px) {
+      .tt-card-featured { flex-direction: column; }
+      .tt-card-featured .tt-card-img { width: 100%; height: 200px; }
+    }
+
+    /* ── WHY WORKSHOP ── */
+    .tt-why {
+      background: var(--bg-deep);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 24px;
+    }
+    .tt-why-inner {
+      max-width: var(--max-w); margin: 0 auto;
+    }
+    .tt-why-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px;
+      margin-top: 40px;
+    }
+    @media (max-width: 720px) { .tt-why-grid { grid-template-columns: 1fr; gap: 24px; } }
+    .tt-why-item {}
+    .tt-why-icon {
+      width: 44px; height: 44px;
+      background: rgba(98,129,65,.15);
+      border: 1px solid rgba(98,129,65,.25);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 16px;
+    }
+    .tt-why-item h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 17px; font-weight: 700; color: var(--beige);
+      margin-bottom: 8px;
+    }
+    .tt-why-item p {
+      font-size: 13.5px; color: var(--text-dim); line-height: 1.7;
+    }
+
+    /* ── PROCESS ── */
+    .tt-process {
+      max-width: var(--max-w); margin: 0 auto;
+      padding: 64px 24px;
+    }
+    .tt-steps {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+      margin-top: 40px;
+      counter-reset: step;
+    }
+    @media (max-width: 900px) { .tt-steps { grid-template-columns: 1fr 1fr; } }
+    @media (max-width: 540px) { .tt-steps { grid-template-columns: 1fr; } }
+    .tt-step {
+      counter-increment: step;
+      position: relative; padding-left: 0;
+    }
+    .tt-step-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px; font-weight: 900;
+      color: rgba(98,129,65,.2); line-height: 1;
+      margin-bottom: 12px;
+    }
+    .tt-step-num::before { content: counter(step, decimal-leading-zero); }
+    .tt-step h4 {
+      font-size: 14px; font-weight: 700; color: var(--beige);
+      margin-bottom: 8px; letter-spacing: .02em;
+    }
+    .tt-step p { font-size: 13px; color: var(--text-dim); line-height: 1.65; }
+
+    /* ── TESTIMONIAL ── */
+    .tt-testimonials {
+      background: var(--bg-deep);
+      border-top: 1px solid var(--border);
+      padding: 64px 24px;
+    }
+    .tt-testimonials-inner {
+      max-width: var(--max-w); margin: 0 auto;
+    }
+    .tt-testi-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+      margin-top: 40px;
+    }
+    @media (max-width: 720px) { .tt-testi-grid { grid-template-columns: 1fr; } }
+    .tt-testi {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px; padding: 24px;
+    }
+    .tt-testi-quote {
+      font-size: 13.5px; color: var(--text-dim);
+      line-height: 1.75; margin-bottom: 20px;
+      font-style: italic;
+    }
+    .tt-testi-quote::before { content: '"'; color: var(--sage); font-size: 20px; font-family: 'Playfair Display', serif; }
+    .tt-testi-author {
+      display: flex; align-items: center; gap: 12px;
+    }
+    .tt-testi-avatar {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: var(--border); flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 14px; font-weight: 700; color: var(--sage);
+    }
+    .tt-testi-name { font-size: 13px; font-weight: 600; color: var(--beige); }
+    .tt-testi-role { font-size: 11px; color: var(--text-faint); margin-top: 2px; }
+
+    /* ── FAQ ── */
+    .tt-faq {
+      max-width: 720px; margin: 0 auto; padding: 64px 24px;
+    }
+    .tt-faq-item {
+      border-bottom: 1px solid var(--border); padding: 20px 0;
+    }
+    .tt-faq-q {
+      font-size: 15px; font-weight: 600; color: var(--beige);
+      cursor: pointer;
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 16px;
+    }
+    .tt-faq-q::after {
+      content: '+'; font-size: 20px; color: var(--sage);
+      flex-shrink: 0; transition: transform .2s;
+    }
+    .tt-faq-item.open .tt-faq-q::after { transform: rotate(45deg); }
+    .tt-faq-a {
+      font-size: 13.5px; color: var(--text-dim); line-height: 1.75;
+      max-height: 0; overflow: hidden; transition: max-height .3s ease, padding .3s;
+    }
+    .tt-faq-item.open .tt-faq-a { max-height: 300px; padding-top: 12px; }
+
+    /* ── CTA BANNER ── */
+    .tt-cta-banner {
+      background: linear-gradient(135deg, rgba(98,129,65,.18) 0%, rgba(20,26,19,.0) 100%);
+      border: 1px solid rgba(98,129,65,.25);
+      border-radius: 12px;
+      padding: 48px 40px; text-align: center;
+      margin: 0 24px 64px;
+      max-width: calc(var(--max-w) - 48px); margin-left: auto; margin-right: auto;
+    }
+    .tt-cta-banner h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px; font-weight: 700; color: var(--beige);
+      margin-bottom: 12px;
+    }
+    .tt-cta-banner p {
+      font-size: 14px; color: var(--text-dim); margin-bottom: 28px; line-height: 1.7;
+    }
+    .tt-cta-btns {
+      display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--forest); color: var(--beige);
+      padding: 13px 28px; border-radius: 4px;
+      font-size: 13px; font-weight: 700; letter-spacing: .04em;
+      text-decoration: none; transition: background .2s;
+    }
+    .btn-primary:hover { background: var(--sage); }
+    .btn-outline {
+      border: 1px solid var(--border); color: var(--beige);
+      padding: 13px 28px; border-radius: 4px;
+      font-size: 13px; font-weight: 700; letter-spacing: .04em;
+      text-decoration: none; transition: border-color .2s, color .2s;
+    }
+    .btn-outline:hover { border-color: var(--sage); color: var(--sage); }
+
+    @media (max-width: 640px) {
+      .tt-hero-title { font-size: 34px; }
+      .tt-section-title { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ░░ NAV ░░ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../" class="nav-logo">Phim <span>&</span> Khói</a>
+    <div class="nav-links">
+      <a href="../">Trang chủ</a>
+      <a href="../blog/">Blog</a>
+      <a href="../khoahoc/" class="active">Khoá học</a>
+      <a href="../ve-toi.html">Về tôi</a>
+    </div>
+    <button class="nav-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><rect y="3" width="20" height="2" rx="1" fill="currentColor"/><rect y="9" width="20" height="2" rx="1" fill="currentColor"/><rect y="15" width="20" height="2" rx="1" fill="currentColor"/></svg>
+    </button>
+    <div class="nav-search-wrap">
+      <span class="nav-search-icon">🔍</span>
+      <input class="nav-search" type="text" placeholder="Tìm kiếm..." aria-label="Tìm kiếm bài viết"/>
+    </div>
+      <div class="nav-spacer"></div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+      <svg class="hb-icon" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect class="hb-line hb-line-1" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect class="hb-line hb-line-2" y="6" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect class="hb-line hb-line-3" y="12" width="20" height="2" rx="1" fill="currentColor"/>
+      </svg>
+    </button>
+    </div>
+</nav>
+
+<!-- ░░ HERO ░░ -->
+<section class="tt-hero">
+  <p class="tt-hero-eyebrow">
+    <span class="live-dot"></span>
+    Workshop Trực Tiếp
+  </p>
+  <h1 class="tt-hero-title">Học điện ảnh<br/><em>cùng nhau, tại chỗ</em></h1>
+  <p class="tt-hero-desc">
+    Không phải video bài giảng hay slide khô khan — đây là không gian thực hành, đặt câu hỏi, tranh luận và xem phim cùng những người cùng đam mê. Mỗi lớp tối đa 12 người.
+  </p>
+  <div class="tt-hero-badges">
+    <span class="tt-hero-badge">Nhóm nhỏ ≤ 12 người</span>
+    <span class="tt-hero-badge">Thực hành ngay tại lớp</span>
+    <span class="tt-hero-badge">Hà Nội</span>
+    <span class="tt-hero-badge">Có bản ghi lại</span>
+  </div>
+  <a href="#workshops" class="tt-hero-cta">Xem lịch khai giảng ↓</a>
+</section>
+
+<!-- ░░ WHY LIVE ░░ -->
+<div class="tt-why">
+  <div class="tt-why-inner">
+    <p class="tt-section-label">Tại sao chọn lớp trực tiếp?</p>
+    <h2 class="tt-section-title">Online dạy kiến thức.<br/>Trực tiếp dạy cách tư duy.</h2>
+    <div class="tt-why-grid">
+      <div class="tt-why-item">
+        <div class="tt-why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Tương tác thực sự</h3>
+        <p>Đặt câu hỏi ngay khi nảy ra ý tưởng. Phản biện, nghe phản biện, và thay đổi quan điểm trong thời gian thực — thứ không video nào làm được.</p>
+      </div>
+      <div class="tt-why-item">
+        <div class="tt-why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Thực hành ngay tại lớp</h3>
+        <p>Mỗi buổi có bài tập thực tế — viết một cảnh, phân cảnh một đoạn phim, hay đọc kịch bản trước nhóm. Kỹ năng đến từ làm, không từ nhìn.</p>
+      </div>
+      <div class="tt-why-item">
+        <div class="tt-why-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--sage)" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>Cộng đồng lâu dài</h3>
+        <p>Học cùng người có cùng đam mê. Nhiều học viên trở thành cộng tác viên, bạn phim, hoặc đồng nghiệp sau khoá học.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ░░ WORKSHOPS ░░ -->
+<section class="tt-section" id="workshops">
+  <p class="tt-section-label">Lịch khai giảng</p>
+  <h2 class="tt-section-title">Workshop sắp tới</h2>
+  <p class="tt-section-sub">Mỗi workshop là một chủ đề hoàn chỉnh — bạn không cần học theo thứ tự, chọn chủ đề phù hợp nhất với bạn.</p>
+
+  <div class="tt-grid">
+
+    <!-- Featured: Flagship workshop -->
+    <div class="tt-card tt-card-featured">
+      <img class="tt-card-img" src="https://images.unsplash.com/photo-1485846234645-a62644f84728?w=680&q=80&fit=crop" alt="Giải mã ngôn ngữ điện ảnh"/>
+      <div class="tt-card-body">
+        <div class="tt-card-meta">
+          <span class="tt-card-tag tag-open">Đang mở đăng ký</span>
+          <span class="tt-card-date">Thứ 7, 10/5/2026 · 9:00 – 17:00</span>
+        </div>
+        <h3 class="tt-card-title">Giải mã Ngôn ngữ Điện ảnh — Khoá Nhập môn</h3>
+        <p class="tt-card-desc">
+          Một ngày học cách nhìn phim khác đi. Từ ánh sáng, góc máy, montage đến âm thanh — bạn sẽ hiểu tại sao một cảnh phim khiến bạn run người, và đạo diễn đã làm điều đó như thế nào.
+          <br/><br/>
+          Phù hợp cho người mới bắt đầu và những ai xem phim nhiều nhưng chưa có công cụ để phân tích.
+        </p>
+        <div class="tt-card-info">
+          <span class="tt-info-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            8 / 12 chỗ còn lại
+          </span>
+          <span class="tt-info-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            8 giờ (1 ngày)
+          </span>
+          <span class="tt-info-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Hoàn Kiếm, Hà Nội
+          </span>
+        </div>
+        <div class="tt-card-footer">
+          <div class="tt-card-price">799.000đ <span>/ người · bao gồm tài liệu</span></div>
+          <a href="mailto:highcomedia@gmail.com?subject=Đăng ký Workshop Ngôn ngữ Điện ảnh 10/5" class="tt-card-btn">Đăng ký ngay →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="tt-card">
+      <img class="tt-card-img" src="https://images.unsplash.com/photo-1542744094-3a31f272c490?w=600&q=80&fit=crop" alt="Viết kịch bản ngắn"/>
+      <div class="tt-card-body">
+        <div class="tt-card-meta">
+          <span class="tt-card-tag tag-open">Đang mở đăng ký</span>
+          <span class="tt-card-date">Thứ 7 & CN, 24–25/5/2026</span>
+        </div>
+        <h3 class="tt-card-title">Viết Kịch bản Phim Ngắn trong 2 Ngày</h3>
+        <p class="tt-card-desc">
+          Bắt đầu với ý tưởng thô, kết thúc với bản kịch bản 5–10 trang hoàn chỉnh. Bạn sẽ được hướng dẫn cấu trúc, nhân vật, đối thoại và pitch ý tưởng trước nhóm.
+        </p>
+        <div class="tt-card-info">
+          <span class="tt-info-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            10 / 12 chỗ còn lại
+          </span>
+          <span class="tt-info-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            16 giờ (2 ngày)
+          </span>
+        </div>
+        <div class="tt-card-footer">
+          <div class="tt-card-price">1.200.000đ <span>/ người</span></div>
+          <a href="mailto:highcomedia@gmail.com?subject=Đăng ký Workshop Kịch bản 24-25/5" class="tt-card-btn">Đăng ký ngay →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="tt-card">
+      <img class="tt-card-img" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80&fit=crop" alt="Phân tích phim nâng cao"/>
+      <div class="tt-card-body">
+        <div class="tt-card-meta">
+          <span class="tt-card-tag tag-coming">Sắp mở</span>
+          <span class="tt-card-date">Tháng 6/2026 · Chưa chốt ngày</span>
+        </div>
+        <h3 class="tt-card-title">Phân tích Phim Nâng cao — Mise-en-scène & Phong cách Đạo diễn</h3>
+        <p class="tt-card-desc">
+          Dành cho học viên đã có nền tảng cơ bản. Cùng nhau xem và mổ xẻ từng shot — từ Kubrick đến Trần Anh Hùng, từ Tarkovsky đến Bong Joon-ho.
+        </p>
+        <div class="tt-card-info">
+          <span class="tt-info-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Tối đa 10 người
+          </span>
+          <span class="tt-info-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            6 giờ (1 ngày)
+          </span>
+        </div>
+        <div class="tt-card-footer">
+          <div class="tt-card-price">650.000đ <span>/ người · dự kiến</span></div>
+          <a href="mailto:highcomedia@gmail.com?subject=Quan tâm Workshop Mise-en-scène T6" class="tt-card-btn">Nhận thông báo →</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="tt-card">
+      <img class="tt-card-img" src="https://images.unsplash.com/photo-1547592180-85f173990554?w=600&q=80&fit=crop" alt="Diễn xuất ứng tác"/>
+      <div class="tt-card-body">
+        <div class="tt-card-meta">
+          <span class="tt-card-tag tag-coming">Sắp mở</span>
+          <span class="tt-card-date">Tháng 7/2026</span>
+        </div>
+        <h3 class="tt-card-title">Diễn xuất Ứng tác cho Diễn viên không chuyên</h3>
+        <p class="tt-card-desc">
+          Kết hợp giữa improv comedy (từ HIGH Club) và kỹ thuật diễn xuất trước máy quay. Khoá học giúp bạn thoải mái hơn trước ống kính, phản xạ tốt hơn và hiểu diễn xuất từ góc nhìn đạo diễn.
+        </p>
+        <div class="tt-card-info">
+          <span class="tt-info-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            Tối đa 12 người
+          </span>
+          <span class="tt-info-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            2 buổi × 3 giờ
+          </span>
+        </div>
+        <div class="tt-card-footer">
+          <div class="tt-card-price">750.000đ <span>/ người · dự kiến</span></div>
+          <a href="mailto:highcomedia@gmail.com?subject=Quan tâm Workshop Diễn xuất T7" class="tt-card-btn">Nhận thông báo →</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- .tt-grid -->
+
+  <!-- Private / Corporate workshops -->
+  <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:8px;padding:28px 32px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:220px;">
+      <p style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);margin-bottom:8px;">Workshop theo yêu cầu</p>
+      <h3 style="font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--beige);margin-bottom:8px;">Tổ chức riêng cho nhóm / doanh nghiệp</h3>
+      <p style="font-size:13.5px;color:var(--text-dim);line-height:1.65;">Đang tổ chức một sự kiện team building sáng tạo? Cần workshop điện ảnh cho nhóm nghiên cứu, trường học, hay công ty? Liên hệ để thảo luận về chương trình phù hợp.</p>
+    </div>
+    <a href="mailto:highcomedia@gmail.com?subject=Workshop theo yêu cầu" style="background:transparent;border:1px solid var(--forest);color:var(--sage);padding:12px 24px;border-radius:4px;font-size:13px;font-weight:700;letter-spacing:.04em;text-decoration:none;white-space:nowrap;transition:all .2s;" onmouseover="this.style.background='var(--forest)';this.style.color='var(--beige)'" onmouseout="this.style.background='transparent';this.style.color='var(--sage)'">Liên hệ tư vấn →</a>
+  </div>
+
+</section>
+
+<!-- ░░ HOW IT WORKS ░░ -->
+<section class="tt-process">
+  <p class="tt-section-label">Quy trình</p>
+  <h2 class="tt-section-title">Từ đăng ký đến ngày học</h2>
+  <div class="tt-steps">
+    <div class="tt-step">
+      <div class="tt-step-num"></div>
+      <h4>Chọn workshop & đăng ký</h4>
+      <p>Gửi email hoặc điền form. Mình sẽ xác nhận chỗ và gửi thông tin thanh toán trong 24h.</p>
+    </div>
+    <div class="tt-step">
+      <div class="tt-step-num"></div>
+      <h4>Nhận tài liệu chuẩn bị</h4>
+      <p>3 ngày trước workshop, bạn nhận được danh sách phim/bài đọc ngắn để chuẩn bị trước — không bắt buộc nhưng nên xem.</p>
+    </div>
+    <div class="tt-step">
+      <div class="tt-step-num"></div>
+      <h4>Tham gia & thực hành</h4>
+      <p>Ngày học có lý thuyết, xem clip, thảo luận nhóm và bài tập thực hành. Không kiểm tra, không điểm số — chỉ học.</p>
+    </div>
+    <div class="tt-step">
+      <div class="tt-step-num"></div>
+      <h4>Nhận recap & cộng đồng</h4>
+      <p>Sau workshop bạn nhận file tổng kết và được thêm vào nhóm cựu học viên — nơi chia sẻ phim, bài viết và cơ hội cộng tác.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ TESTIMONIALS ░░ -->
+<div class="tt-testimonials">
+  <div class="tt-testimonials-inner">
+    <p class="tt-section-label">Học viên nói gì</p>
+    <h2 class="tt-section-title">Phản hồi từ các buổi trước</h2>
+    <div class="tt-testi-grid">
+      <div class="tt-testi">
+        <p class="tt-testi-quote">Mình đã đọc rất nhiều sách về điện ảnh nhưng chỉ sau một ngày workshop mình mới thực sự hiểu tại sao một số cảnh phim khiến mình xúc động đến vậy. Cách Hà dạy rất thực tế và không khô khan.</p>
+        <div class="tt-testi-author">
+          <div class="tt-testi-avatar">M</div>
+          <div>
+            <div class="tt-testi-name">Minh Anh</div>
+            <div class="tt-testi-role">Sinh viên báo chí · Workshop Nhập môn</div>
+          </div>
+        </div>
+      </div>
+      <div class="tt-testi">
+        <p class="tt-testi-quote">Workshop kịch bản 2 ngày giúp mình vỡ ra nhiều điều. Mình đã có ý tưởng phim ngắn từ 2 năm trước mà không biết bắt đầu từ đâu — sau đó mình đã viết xong và quay phim đó.</p>
+        <div class="tt-testi-author">
+          <div class="tt-testi-avatar">T</div>
+          <div>
+            <div class="tt-testi-name">Tuấn Khải</div>
+            <div class="tt-testi-role">Nhiếp ảnh gia · Workshop Kịch bản</div>
+          </div>
+        </div>
+      </div>
+      <div class="tt-testi">
+        <p class="tt-testi-quote">Nhóm nhỏ là điểm cộng lớn nhất — mình được feedback trực tiếp, không chỉ ngồi nghe giảng. Và sau workshop mình vẫn giữ liên lạc với mấy bạn trong nhóm để cùng xem phim mỗi tháng.</p>
+        <div class="tt-testi-author">
+          <div class="tt-testi-avatar">L</div>
+          <div>
+            <div class="tt-testi-name">Linh Phương</div>
+            <div class="tt-testi-role">Biên tập viên · Workshop Phân tích phim</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ░░ FAQ ░░ -->
+<div class="tt-faq">
+  <p class="tt-section-label">Câu hỏi thường gặp</p>
+  <h2 class="tt-section-title" style="font-size:26px;margin-bottom:32px;">FAQ</h2>
+
+  <div class="tt-faq-item">
+    <div class="tt-faq-q">Tôi hoàn toàn không biết gì về điện ảnh, có nên đăng ký không?</div>
+    <div class="tt-faq-a">Hoàn toàn nên! Workshop Nhập môn được thiết kế cho người bắt đầu từ zero. Điều kiện duy nhất là bạn thích xem phim và muốn hiểu hơn về nó. Kiến thức chuyên môn không cần thiết.</div>
+  </div>
+  <div class="tt-faq-item">
+    <div class="tt-faq-q">Workshop diễn ra ở đâu tại Hà Nội?</div>
+    <div class="tt-faq-a">Địa điểm cụ thể được xác nhận sau khi đăng ký — thường ở khu vực Hoàn Kiếm hoặc Hai Bà Trưng. Mình sẽ gửi địa chỉ chi tiết và hướng dẫn đến trước 3 ngày.</div>
+  </div>
+  <div class="tt-faq-item">
+    <div class="tt-faq-q">Nếu không tham dự được vào ngày đó thì sao?</div>
+    <div class="tt-faq-a">Hủy trước 7 ngày: hoàn 100%. Hủy từ 3–7 ngày: chuyển sang workshop khác hoặc hoàn 50%. Hủy dưới 3 ngày: không hoàn tiền nhưng bạn nhận được bản ghi lại và tài liệu đầy đủ.</div>
+  </div>
+  <div class="tt-faq-item">
+    <div class="tt-faq-q">Có cần mang theo thiết bị gì không?</div>
+    <div class="tt-faq-a">Không cần thiết bị quay phim hay máy tính. Chỉ cần bút viết và một cái đầu tò mò. Tài liệu và công cụ thực hành sẽ được cung cấp tại lớp.</div>
+  </div>
+  <div class="tt-faq-item">
+    <div class="tt-faq-q">Có workshop nào cho người ở ngoài Hà Nội không?</div>
+    <div class="tt-faq-a">Hiện tại workshop trực tiếp chỉ tổ chức tại Hà Nội. Nếu bạn ở TP.HCM hoặc các tỉnh khác, bạn có thể tham gia các khoá online tại trang Khoá học. Mình cũng đang lên kế hoạch workshop tại TP.HCM — hãy đăng ký nhận thông báo qua email!</div>
+  </div>
+</div>
+
+<!-- ░░ CTA BANNER ░░ -->
+<div class="tt-cta-banner">
+  <h2>Chưa chắc chắn?<br/>Thử khoá online miễn phí trước</h2>
+  <p>Khoá "Nhập môn Phân tích Phim" online hoàn toàn miễn phí — 12 bài học, không cần đăng ký tài khoản. Xem thử rồi quyết định.</p>
+  <div class="tt-cta-btns">
+    <a href="../khoahoc/" class="btn-primary">Xem khoá học online →</a>
+    <a href="mailto:highcomedia@gmail.com" class="btn-outline">Hỏi trực tiếp qua email</a>
+  </div>
+</div>
+
+<!-- ░░ FOOTER ░░ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="f-logo">Phim <span class="amp">&amp;</span> Khói</div>
+        <p class="f-desc">Nơi điện ảnh gặp gỡ thi ca.</p>
+      </div>
+      <div>
+        <div class="f-col-ttl">Nội dung</div>
+        <ul class="f-links">
+          <li><a href="../blog/">Blog</a></li>
+          <li><a href="../blog/">Phân tích phim</a></li>
+          <li><a href="../blog/">Kỹ thuật làm phim</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-ttl">Khoá học</div>
+        <ul class="f-links">
+          <li><a href="../khoahoc/">Xem khoá học</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-ttl">Liên hệ</div>
+        <ul class="f-links">
+          <li><a href="../ve-toi.html">Về tôi</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="f-copy">© 2026 Phim &amp; Khói · Đào Ngọc Hà</div>
+      <div class="footer-bottom-right">
+        <div class="theme-toggle">
+          <span class="theme-toggle-label">GIAO DIỆN</span>
+          <button class="theme-btn theme-btn-dark"  data-theme="dark"  onclick="setTheme('dark')"  title="Tối"  aria-label="Chế độ tối"></button>
+          <button class="theme-btn theme-btn-light" data-theme="light" onclick="setTheme('light')" title="Sáng" aria-label="Chế độ sáng"></button>
+        </div>
+        <div class="f-social">
+          <a href="#" class="soc-btn" title="YouTube" aria-label="YouTube">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+          </a>
+          <a href="#" class="soc-btn" title="Facebook" aria-label="Facebook">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1c0 6 4.4 11 10.1 11.9v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.3l-.5 3.5h-2.8V24C19.6 23.1 24 18.1 24 12.1z"/></svg>
+          </a>
+          <a href="#" class="soc-btn" title="Instagram" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+          </a>
+          <a href="#" class="soc-btn" title="TikTok" aria-label="TikTok">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 3.3A4.5 4.5 0 0 1 15.2 0h-3.3v16.6a2.7 2.7 0 0 1-2.7 2.5 2.7 2.7 0 0 1-2.7-2.7 2.7 2.7 0 0 1 2.7-2.7c.3 0 .5 0 .8.1V10.4a6 6 0 0 0-.8-.1 6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6V8.2a7.8 7.8 0 0 0 4.4 1.3V6.2a4.5 4.5 0 0 1-2.1-.9z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // FAQ accordion
+  document.querySelectorAll('.tt-faq-q').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.tt-faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.tt-faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    });
+  });
+</script>
+
+<script src="../assets/js/articles.js"></script>
+<script src="../assets/js/nav.js"></script>
+<script src="../assets/js/theme.js"></script>
+</body>
+</html>

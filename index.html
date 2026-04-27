@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<script>(function(){var t=localStorage.getItem('pvk-theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phim & Khói — Điện ảnh · Phân tích · Khoá học</title>
+  <link rel="canonical" href="https://phimvakhoi.com/"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://phimvakhoi.com/"/>
+  <meta property="og:title" content="Phim &amp; Khói — Điện ảnh · Phân tích · Khoá học"/>
+  <meta property="og:description" content="Nơi điện ảnh gặp gỡ thi ca. Phân tích phim chuyên sâu, kiến thức đạo diễn và quay phim dành cho người yêu điện ảnh Việt Nam."/>
+  <meta property="og:image" content="https://images.unsplash.com/photo-1478720568477-152d9b8a8de7?w=1200&q=85"/>
+  <meta property="og:site_name" content="Phim &amp; Khói"/>
+  <meta property="og:locale" content="vi_VN"/>
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Phim &amp; Khói — Điện ảnh · Phân tích · Khoá học"/>
+  <meta name="twitter:description" content="Nơi điện ảnh gặp gỡ thi ca. Phân tích phim chuyên sâu, khoá học làm phim online."/>
+  <meta name="twitter:image" content="https://images.unsplash.com/photo-1478720568477-152d9b8a8de7?w=1200&q=85"/>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Phim & Khói",
+    "url": "https://phimvakhoi.com",
+    "description": "Nơi điện ảnh gặp gỡ thi ca. Phân tích phim, kiến thức đạo diễn và quay phim, khoá học online.",
+    "inLanguage": "vi-VN"
+  }
+  </script>
+  <meta name="description" content="Phim & Khói — Nơi điện ảnh gặp gỡ thi ca. Phân tích phim chuyên sâu, kiến thức làm phim và khoá học online dành cho người yêu điện ảnh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css"/>
+
+  <style>
+    /* ── PALETTE ────────────────────────────────
+       #1B211A  nền chính (dark green-black)
+       #628141  forest green  → CTA, active, border
+       #8BAE66  sage green    → links, tags, accent
+       #EBD5AB  warm beige    → headings, highlights
+       #141a13  deep black    → nav, footer bg
+       #222d21  card surface
+       #2C3A2B  border, divider
+    ──────────────────────────────────────────── */
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #1B211A;
+      --bg-deep:   #141a13;
+      --bg-card:   #222d21;
+      --bg-hover:  #1e2a1d;
+      --surface:   #2C3A2B;
+      --border:    #2a3829;
+      --forest:    #628141;
+      --sage:      #8BAE66;
+      --beige:     #EBD5AB;
+      --text:      #b8b09a;
+      --text-dim:  #7a8270;
+      --text-faint:#445040;
+      --max-w:     1160px;
+      --gap:       28px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      font-size: 14px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; height: 100%; object-fit: cover; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--bg-deep); }
+    ::-webkit-scrollbar-thumb { background: var(--surface); border-radius: 3px; }
+
+    /* ── CONTAINER ── */
+    .container {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    /* ══════════════════════════════════════════
+       HERO
+    ══════════════════════════════════════════ */
+    .hero-wrap {
+      background: var(--bg-deep);
+      border-bottom: 1px solid var(--border);
+    }
+    .hero {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: grid;
+      grid-template-columns: 1fr 440px;
+      min-height: 420px;
+      gap: 0;
+      position: relative;
+    }
+    .hero-content {
+      padding: 44px 36px 40px 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 6px;
+      background: var(--forest); color: var(--beige);
+      font-size: 10px; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: 4px 12px; border-radius: 2px;
+      margin-bottom: 16px; width: fit-content;
+    }
+    .hero-blink {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--beige); animation: blink 1.4s ease-in-out infinite;
+    }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 36px; font-weight: 700;
+      color: var(--beige); line-height: 1.2;
+      margin-bottom: 12px;
+    }
+    .hero-title em { font-style: italic; color: var(--sage); }
+    .hero-meta {
+      font-size: 11px; color: var(--text-faint);
+      letter-spacing: .04em; margin-bottom: 14px;
+    }
+    .hero-meta span { color: var(--text-dim); }
+    .hero-excerpt {
+      font-size: 14px; color: var(--text-dim);
+      line-height: 1.75; margin-bottom: 22px; max-width: 500px;
+    }
+    .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--forest); color: var(--beige);
+      font-size: 12px; font-weight: 700;
+      letter-spacing: .07em; text-transform: uppercase;
+      padding: 10px 22px; border-radius: 3px; transition: background .2s;
+    }
+    .btn-primary:hover { background: var(--sage); color: var(--bg-deep); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 5px;
+      border: 1px solid var(--border); color: var(--text-dim);
+      font-size: 12px; font-weight: 600;
+      padding: 9px 18px; border-radius: 3px;
+      transition: border-color .2s, color .2s;
+    }
+    .btn-ghost:hover { border-color: var(--sage); color: var(--sage); }
+
+    .hero-image-col {
+      position: relative; overflow: hidden;
+      background: var(--bg-card);
+    }
+    .hero-image-col img {
+      width: 100%; height: 100%; object-fit: cover; opacity: .75;
+    }
+    .hero-image-col::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(to right, var(--bg-deep) 0%, transparent 35%),
+                  linear-gradient(to top, var(--bg-deep) 0%, transparent 40%);
+    }
+
+    /* ── TABS ── */
+    .tabs-wrap {
+      background: var(--bg-deep);
+      border-bottom: 1px solid var(--border);
+    }
+    .tabs {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+      display: flex;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .tabs::-webkit-scrollbar { display: none; }
+    .tab {
+      padding: 12px 18px;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: .07em; text-transform: uppercase;
+      color: var(--text-faint);
+      border-bottom: 2px solid transparent;
+      white-space: nowrap; cursor: pointer;
+      transition: color .2s, border-color .2s;
+      user-select: none;
+    }
+    .tab:hover  { color: var(--text); }
+    .tab.active { color: var(--sage); border-bottom-color: var(--sage); }
+
+    /* ══════════════════════════════════════════
+       MAIN GRID
+    ══════════════════════════════════════════ */
+    .main-outer {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 264px;
+      gap: 0;
+      border: 1px solid var(--border);
+      border-top: none;
+    }
+
+    /* Section header */
+    .sec-hdr {
+      display: flex; align-items: center; gap: 12px;
+      padding: 18px 20px 12px;
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 58px;
+      background: var(--bg); z-index: 10;
+    }
+    .col-sidebar .sec-hdr { background: var(--bg-deep); }
+    .sec-ttl {
+      font-size: 10px; font-weight: 700; color: var(--beige);
+      letter-spacing: .14em; text-transform: uppercase; white-space: nowrap;
+    }
+    .sec-line { flex: 1; height: 1px; background: var(--border); }
+    .sec-more {
+      font-size: 10px; color: var(--forest); font-weight: 600;
+      white-space: nowrap; transition: color .2s;
+    }
+    .sec-more:hover { color: var(--sage); }
+
+    /* Col borders */
+    .col-articles { border-right: 1px solid var(--border); }
+    .col-news     { border-right: 1px solid var(--border); }
+    .col-sidebar  { background: var(--bg-deep); }
+
+    /* ── ARTICLE CARD ── */
+    .acard {
+      padding: 18px 20px;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: background .15s;
+    }
+    .acard:hover { background: var(--bg-hover); }
+
+    .acard-img {
+      width: 100%; height: 160px;
+      border-radius: 5px; overflow: hidden;
+      border: 1px solid var(--border);
+      margin-bottom: 12px;
+      position: relative;
+      background: var(--bg-card);
+    }
+    .acard-img img { width: 100%; height: 100%; object-fit: cover; }
+    .acard-img-sm {
+      width: 76px; height: 56px; flex-shrink: 0;
+      border-radius: 4px; overflow: hidden;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+    .acard-img-sm img { width: 100%; height: 100%; object-fit: cover; }
+
+    .acard-cat {
+      font-size: 9px; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      margin-bottom: 5px;
+    }
+    .cat-analysis { color: var(--beige); }
+    .cat-tech     { color: var(--sage); }
+    .cat-review   { color: #b0a060; }
+    .cat-script   { color: #ab8beb; }
+    .cat-news     { color: #60a5fa; }
+    .cat-award    { color: #fbbf24; }
+    .cat-art      { color: #a090c0; }
+
+    .acard-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; font-weight: 700;
+      color: #d0c8b4; line-height: 1.35;
+      margin-bottom: 7px;
+      transition: color .2s;
+    }
+    .acard:hover .acard-title { color: var(--beige); }
+    .acard-title-sm {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px; font-weight: 700;
+      color: #c0b8a4; line-height: 1.35;
+      margin-bottom: 5px; transition: color .2s;
+    }
+    .acard:hover .acard-title-sm { color: var(--beige); }
+    .acard-excerpt {
+      font-size: 12px; color: var(--text-dim);
+      line-height: 1.65; margin-bottom: 9px;
+    }
+    .acard-meta {
+      font-size: 10px; color: var(--text-faint);
+      display: flex; align-items: center; gap: 6px;
+    }
+    .sep { opacity: .4; }
+    .acard-row { display: flex; gap: 12px; align-items: flex-start; }
+    .acard-row-text { flex: 1; }
+
+    /* ── NEWS ── */
+    .news-wrap { padding: 8px 20px; }
+    .nitem {
+      display: flex; gap: 10px; align-items: flex-start;
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+      cursor: pointer;
+    }
+    .nitem:last-child { border-bottom: none; }
+    .nitem:hover .n-text { color: var(--beige); }
+    .ndot {
+      width: 7px; height: 7px; border-radius: 50%;
+      flex-shrink: 0; margin-top: 5px;
+    }
+    .nd-beige  { background: var(--beige); }
+    .nd-sage   { background: var(--sage); }
+    .nd-forest { background: var(--forest); }
+    .n-text {
+      font-size: 12px; color: var(--text-dim);
+      line-height: 1.5; transition: color .2s;
+    }
+    .n-src { font-size: 10px; color: var(--text-faint); margin-top: 3px; font-style: italic; }
+
+    /* ══════════════════════════════════════════
+       SIDEBAR
+    ══════════════════════════════════════════ */
+    .sb-block { padding: 14px 16px; border-bottom: 1px solid var(--border); }
+    .sb-ttl {
+      font-size: 9px; font-weight: 700; color: var(--beige);
+      letter-spacing: .14em; text-transform: uppercase;
+      margin-bottom: 11px; padding-bottom: 7px;
+      border-bottom: 1px solid var(--surface);
+    }
+
+    /* Live banner */
+    .live-banner {
+      margin: 14px 14px 0;
+      background: linear-gradient(135deg, #1c2b1a, #263d22);
+      border: 1px solid var(--forest);
+      border-radius: 8px; padding: 14px;
+    }
+    .live-tag {
+      display: inline-flex; align-items: center; gap: 5px;
+      background: var(--forest); color: var(--beige);
+      font-size: 9px; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: 3px 9px; border-radius: 2px; margin-bottom: 9px;
+    }
+    .live-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px; font-weight: 700;
+      color: var(--beige); line-height: 1.35; margin-bottom: 5px;
+    }
+    .live-detail { font-size: 11px; color: var(--text-dim); margin-bottom: 11px; }
+    .live-btn {
+      display: block; text-align: center;
+      background: var(--forest); color: var(--beige);
+      font-size: 11px; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: 8px; border-radius: 4px; transition: background .2s;
+    }
+    .live-btn:hover { background: var(--sage); color: var(--bg-deep); }
+
+    /* Course card */
+    .c-card {
+      display: flex; gap: 10px;
+      padding: 9px; background: var(--bg-card);
+      border: 1px solid var(--border); border-radius: 6px;
+      margin-bottom: 7px; cursor: pointer;
+      transition: border-color .2s;
+    }
+    .c-card:hover { border-color: var(--forest); }
+    .c-thumb {
+      width: 38px; height: 38px; flex-shrink: 0;
+      background: var(--surface); border-radius: 5px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 17px;
+    }
+    .c-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 12px; font-weight: 700;
+      color: #c0b8a4; line-height: 1.3; margin-bottom: 3px;
+    }
+    .c-meta { font-size: 10px; color: var(--text-faint); margin-bottom: 5px; }
+    .badge {
+      font-size: 9px; font-weight: 700;
+      padding: 2px 8px; border-radius: 10px;
+      display: inline-block;
+    }
+    .b-free { background: rgba(139,174,102,.15); color: var(--sage); border: 1px solid rgba(139,174,102,.25); }
+    .b-paid { background: rgba(235,213,171,.1); color: var(--beige); border: 1px solid rgba(235,213,171,.2); }
+
+    /* Tags */
+    .tag-cloud { display: flex; flex-wrap: wrap; gap: 5px; }
+    .tag {
+      font-size: 10px; font-weight: 500;
+      padding: 4px 9px; border-radius: 2px; cursor: pointer;
+      letter-spacing: .03em; transition: background .15s;
+    }
+    .t-beige { background: rgba(235,213,171,.07); color: var(--beige); border: 1px solid rgba(235,213,171,.14); }
+    .t-sage  { background: rgba(139,174,102,.07); color: var(--sage);  border: 1px solid rgba(139,174,102,.18); }
+    .t-forest{ background: rgba(98,129,65,.1);    color: var(--forest);border: 1px solid rgba(98,129,65,.22); }
+    .t-beige:hover  { background: rgba(235,213,171,.14); }
+    .t-sage:hover   { background: rgba(139,174,102,.14); }
+    .t-forest:hover { background: rgba(98,129,65,.18); }
+
+    /* Newsletter */
+    .nl-input {
+      width: 100%; background: var(--bg-card);
+      border: 1px solid var(--border); border-radius: 4px;
+      padding: 9px 12px; font-size: 12px; font-family: 'Inter', sans-serif;
+      color: var(--text); margin-bottom: 8px; outline: none;
+      transition: border-color .2s;
+    }
+    .nl-input:focus { border-color: var(--forest); }
+    .nl-input::placeholder { color: var(--text-faint); }
+    .nl-btn {
+      width: 100%; background: var(--sage); color: var(--bg-deep);
+      font-size: 11px; font-family: 'Inter', sans-serif; font-weight: 700;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: 9px; border-radius: 4px; border: none;
+      cursor: pointer; transition: background .2s;
+    }
+    .nl-btn:hover { background: var(--beige); }
+
+    /* Quote */
+    .quote-block {
+      border-left: 2px solid var(--forest);
+      padding-left: 14px; margin-top: 4px;
+    }
+    .quote-text {
+      font-family: 'Playfair Display', serif;
+      font-style: italic; font-size: 13px;
+      color: var(--beige); line-height: 1.7;
+    }
+    .quote-author { font-size: 10px; color: var(--text-faint); margin-top: 7px; }
+
+    /* ══════════════════════════════════════════
+       ABOUT STRIP
+    ══════════════════════════════════════════ */
+    .about-wrap {
+      background: var(--bg-deep);
+      border-top: 2px solid var(--forest);
+      border-bottom: 1px solid var(--border);
+    }
+    .about-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 26px 24px;
+      display: flex; gap: 20px; align-items: center;
+    }
+    .about-avatar {
+      width: 72px; height: 72px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--surface), var(--forest));
+      border: 2px solid var(--forest);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px; flex-shrink: 0; overflow: hidden;
+    }
+    .about-avatar img { width:100%; height:100%; object-fit:cover; border-radius:50%; display:block; }
+    .about-role {
+      font-size: 10px; color: var(--forest); font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase; margin-bottom: 3px;
+    }
+    .about-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px; font-weight: 700;
+      color: var(--beige); margin-bottom: 5px;
+    }
+    .about-bio { font-size: 13px; color: var(--text-dim); line-height: 1.65; }
+    .about-btn {
+      flex-shrink: 0;
+      border: 1px solid var(--forest); color: var(--sage);
+      font-size: 11px; font-weight: 700;
+      letter-spacing: .08em; text-transform: uppercase;
+      padding: 10px 20px; border-radius: 3px; white-space: nowrap;
+      transition: background .2s, color .2s;
+    }
+    .about-btn:hover { background: var(--forest); color: var(--beige); }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════ */
+    footer { background: var(--bg-deep); border-top: 1px solid var(--border); }
+    .footer-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 32px 24px 22px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 18px;
+    }
+    .f-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; font-weight: 700;
+      color: var(--beige); margin-bottom: 8px;
+    }
+    .f-logo .amp { color: var(--sage); font-style: italic; }
+    .f-desc { font-size: 12px; color: var(--text-faint); line-height: 1.7; }
+    .f-col-ttl {
+      font-size: 10px; font-weight: 700; color: var(--beige);
+      letter-spacing: .12em; text-transform: uppercase; margin-bottom: 11px;
+    }
+    .f-links { list-style: none; }
+    .f-links li { margin-bottom: 7px; }
+    .f-links a { font-size: 12px; color: var(--text-faint); transition: color .2s; }
+    .f-links a:hover { color: var(--sage); }
+    .footer-bottom {
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .f-copy { font-size: 11px; color: var(--text-faint); }
+    .f-social { display: flex; gap: 7px; }
+    .soc-btn {
+      text-decoration: none;
+      width: 30px; height: 30px;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 4px; display: flex; align-items: center;
+      justify-content: center; font-size: 13px; cursor: pointer;
+      transition: border-color .2s, background .2s;
+    }
+    .soc-btn:hover { border-color: var(--sage); background: var(--surface); }
+
+    /* ══════════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════════ */
+    @media (max-width: 1040px) {
+      .main-grid { grid-template-columns: 1fr 240px; }
+      .col-news { display: none; }
+    }
+    @media (max-width: 768px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-content { padding: 28px 0 24px; }
+      .hero-image-col { height: 220px; }
+      .hero-title { font-size: 26px; }
+      .main-grid { grid-template-columns: 1fr; }
+      .col-articles { border-right: none; border-bottom: 1px solid var(--border); }
+      .col-sidebar { border-top: 1px solid var(--border); }
+      .footer-top { grid-template-columns: 1fr 1fr; gap: 20px; }
+      .about-inner { flex-direction: column; text-align: center; }
+    }
+    @media (max-width: 480px) {
+      .container, .nav-inner, .hero, .main-outer,
+      .about-inner, .footer-inner, .tabs { padding-left: 14px; padding-right: 14px; }
+      .footer-top { grid-template-columns: 1fr; }
+      .hero-title { font-size: 22px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     DỮ LIỆU BÀI VIẾT — Chỉnh sửa tại đây
+     Để thêm bài mới: copy một object {}
+     và dán vào đầu mảng ARTICLES bên dưới
+════════════════════════════════════════ -->
+<script>
+const ARTICLES = [
+  {
+    id: 8,
+    featured: true,
+    category: "Biên kịch",
+    catClass: "cat-script",
+    title: "Phân tích chi tiết cách viết một kịch bản phim kinh dị",
+    excerpt: "Hướng dẫn toàn diện từ biên kịch Jason Hellerman: định nghĩa thể loại, các tiểu thể loại, mô-típ kinh điển và dàn ý 14 bước để viết kịch bản kinh dị thực sự đáng sợ.",
+    readTime: "14 phút đọc",
+    date: "26/04/2026",
+    image: "assets/images/how-to-write-a-horror-movie.avif",
+    url: "blog/bien-kich/phan-tich-kich-ban-kinh-di/"
+  },
+  {
+    id: 7,
+    featured: false,
+    category: "Phân tích phim",
+    catClass: "cat-analysis",
+    title: "Jordan Peele và Duality of Spectacle: Vết sẹo của Hollywood",
+    excerpt: "Từ Get Out đến Nope, Peele xây dựng một ngôn ngữ điện ảnh riêng về cách Hollywood tiêu thụ con người như màn trình diễn — và tại sao đừng nhìn thẳng vào nó.",
+    readTime: "9 phút đọc",
+    date: "26/04/2026",
+    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=400&q=80",
+    url: "blog/phan-tich-phim/jordan-peele-spectacle/"
+  },
+  {
+    id: 6,
+    featured: false,
+    category: "Biên kịch",
+    catClass: "cat-script",
+    title: "Cấu trúc của sợ hãi: Cách viết kịch bản phim kinh dị",
+    excerpt: "Phim kinh dị không hoạt động bằng jump scare — nó hoạt động bằng cấu trúc. Từ dread đến payoff, hướng dẫn viết kịch bản kinh dị thực sự đáng sợ.",
+    readTime: "9 phút đọc",
+    date: "26/04/2026",
+    image: "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=400&q=80",
+    url: "blog/bien-kich/viet-phim-kinh-di/"
+  },
+  {
+    id: 5,
+    featured: false,
+    category: "Biên kịch",
+    catClass: "cat-script",
+    title: "Tarantino dùng đối thoại để uy hiếp như thế nào — Phân tích cảnh burger Pulp Fiction",
+    excerpt: "Tại sao Jules hỏi về burger trước khi giết người? Phân tích kỹ thuật subtext, quyền lực trong đối thoại và tại sao sự bình thường là vũ khí đáng sợ nhất.",
+    readTime: "9 phút đọc",
+    date: "26/04/2026",
+    image: "https://images.unsplash.com/photo-1542744094-3a31f272c490?w=400&q=80",
+    url: "blog/bien-kich/tarantino-doi-thoai-pulp-fiction/"
+  },
+  {
+    id: 1,
+    featured: false,
+    category: "Phân tích phim",
+    catClass: "cat-analysis",
+    title: "Ngôn ngữ hình ảnh của Christopher Nolan: Khi thời gian trở thành cảm xúc",
+    excerpt: "Từ Memento đến Oppenheimer, Nolan không đơn thuần kể chuyện — ông xây dựng cấu trúc thời gian như một nhạc cụ, kéo khán giả vào trạng thái cảm xúc mà không một lời thoại nào diễn đạt được.",
+    readTime: "7 phút đọc",
+    date: "24/04/2025",
+    image: "https://images.unsplash.com/photo-1509347528160-9a9e33742cdb?w=400&q=80",
+    url: "blog/phan-tich-phim/nolan-va-thoi-gian/"
+  },
+  {
+    id: 2,
+    featured: false,
+    category: "Kỹ thuật quay phim",
+    catClass: "cat-tech",
+    title: "Shot Reverse Shot và lý do 90% phim Hollywood đều dùng kỹ thuật này",
+    excerpt: "Một kỹ thuật đơn giản đến mức vô hình — nhưng chính sự vô hình đó là sức mạnh thật sự của nó.",
+    readTime: "8 phút đọc",
+    date: "20/04/2025",
+    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&q=80",
+    url: "blog/ky-thuat/shot-reverse-shot/"
+  },
+  {
+    id: 3,
+    featured: false,
+    category: "Phân tích phim",
+    catClass: "cat-analysis",
+    title: "Màu sắc trong phim Wes Anderson: Hệ thống màu có chủ ý đến từng khung hình",
+    excerpt: "Màu sắc không phải trang trí — đó là ngôn ngữ kể chuyện tinh tế nhất của Anderson.",
+    readTime: "6 phút đọc",
+    date: "18/04/2025",
+    image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&q=80",
+    url: "blog/phan-tich-phim/mau-sac-wes-anderson/"
+  },
+  {
+    id: 4,
+    featured: false,
+    category: "Review phim",
+    catClass: "cat-review",
+    title: "Sinners (2025) — Khi thể loại horror tìm lại được bản năng nguyên thủy",
+    excerpt: "",
+    readTime: "6 phút đọc",
+    date: "17/04/2025",
+    image: "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=400&q=80",
+    url: "#"
+  },
+  {
+    id: 5,
+    featured: false,
+    category: "Nghệ thuật đạo diễn",
+    catClass: "cat-art",
+    title: "Tarkovsky và khái niệm 'thời gian bị giam cầm' — Triết học điện ảnh sâu sắc nhất thế kỷ 20",
+    excerpt: "",
+    readTime: "18 phút đọc",
+    date: "14/04/2025",
+    image: "https://images.unsplash.com/photo-1485846234645-a62644f84728?w=400&q=80",
+    url: "#"
+  }
+];
+
+const NEWS = [
+  {
+    dot: "nd-beige",
+    text: "Cannes 2025: Đạo diễn Iran Jafar Panahi đoạt Palme d'Or với phim It Was Just an Accident — giải thưởng cao nhất của liên hoan phim uy tín nhất hành tinh.",
+    source: "festival-cannes.com · 3 giờ trước"
+  },
+  {
+    dot: "nd-sage",
+    text: "Wes Anderson, Dardenne Brothers và Richard Linklater góp mặt trong danh sách tranh giải chính thức Cannes 78 — hứa hẹn một mùa phim arthouse đặc sắc.",
+    source: "screendaily.com · 6 giờ trước"
+  },
+  {
+    dot: "nd-forest",
+    text: "Năm 2025, các nhà quay phim ngày càng ưa dùng 'lens dirt' và flare thực tế để tạo lớp hình ảnh thô, hữu cơ — phong trào chống lại sự hoàn hảo số hoá.",
+    source: "nofilmschool.com · 1 ngày trước"
+  },
+  {
+    dot: "nd-beige",
+    text: "Liên hoan phim Busan 2025 mở đơn đăng ký — lần đầu tiên phim Việt Nam có hạng mục tranh giải riêng biệt, tín hiệu tích cực cho điện ảnh nước nhà.",
+    source: "indiewire.com · 2 ngày trước"
+  },
+  {
+    dot: "nd-sage",
+    text: "Virtual production với màn hình LED thay thế phim trường truyền thống — Sony, Netflix và A24 đang cùng đầu tư vào tương lai của việc làm phim.",
+    source: "variety.com · 3 ngày trước"
+  },
+  {
+    dot: "nd-forest",
+    text: "Scarlett Johansson và Harris Dickinson chính thức ra mắt bộ phim đạo diễn đầu tay tại Un Certain Regard — Cannes 2025.",
+    source: "deadline.com · 4 ngày trước"
+  }
+];
+
+const COURSES = [
+  { icon: "🎬", name: "Nhập môn Phân tích Phim", meta: "12 bài · 3 giờ 20 phút", badge: "Miễn phí", badgeClass: "b-free", url: "#" },
+  { icon: "🎥", name: "Kỹ thuật Quay phim Cơ bản", meta: "18 bài · 5 giờ 10 phút", badge: "299.000đ", badgeClass: "b-paid", url: "#" },
+  { icon: "🎨", name: "Color Grading cho Indie Film", meta: "10 bài · 2 giờ 45 phút", badge: "499.000đ", badgeClass: "b-paid", url: "#" },
+  { icon: "✍️", name: "Viết kịch bản từ A đến Z", meta: "22 bài · 6 giờ 30 phút", badge: "599.000đ", badgeClass: "b-paid", url: "#" }
+];
+</script>
+
+<!-- ════════════════════════════
+     NAVIGATION
+════════════════════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="./" class="nav-logo">Phim <span class="amp">&</span> Khói</a>
+    <div class="nav-links">
+      <a href="./" class="active">Trang chủ</a>
+      <a href="blog/">Blog</a>
+      <a href="khoahoc/">Khoá học</a>
+      <a href="ve-toi.html">Về tôi</a>
+    </div>
+    <div class="nav-search-wrap">
+      <span class="nav-search-icon">🔍</span>
+      <input class="nav-search" type="text" placeholder="Tìm kiếm..." />
+    </div>
+      <div class="nav-spacer"></div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Menu" aria-expanded="false">
+      <svg class="hb-icon" width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect class="hb-line hb-line-1" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect class="hb-line hb-line-2" y="6" width="20" height="2" rx="1" fill="currentColor"/>
+        <rect class="hb-line hb-line-3" y="12" width="20" height="2" rx="1" fill="currentColor"/>
+      </svg>
+    </button>
+    </div>
+</nav>
+
+<!-- ════════════════════════════
+     HERO
+════════════════════════════ -->
+<div class="hero-wrap">
+  <div class="hero" id="hero-section">
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="hero-blink"></span>
+        Bài viết nổi bật
+      </div>
+      <h1 class="hero-title" id="hero-title">Đang tải...</h1>
+      <p class="hero-meta" id="hero-meta"></p>
+      <p class="hero-excerpt" id="hero-excerpt"></p>
+      <div class="hero-actions">
+        <a href="#" class="btn-primary" id="hero-btn">Đọc bài viết →</a>
+        <a href="blog/" class="btn-ghost">Xem tất cả bài viết</a>
+      </div>
+    </div>
+    <div class="hero-image-col">
+      <img id="hero-img" src="" alt="Hero image" />
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     TABS
+════════════════════════════ -->
+<div class="tabs-wrap">
+  <div class="tabs">
+    <div class="tab active" data-filter="phan-tich" onclick="setTab(this)">✍️ Phân tích phim</div>
+    <div class="tab" data-filter="ky-thuat" onclick="setTab(this)">🎥 Kỹ thuật</div>
+    <div class="tab" data-filter="tin-tuc" onclick="setTab(this)">📰 Tin tức phim</div>
+    <div class="tab" data-filter="khoa-hoc" onclick="setTab(this)">🎓 Khoá học</div>
+    <div class="tab" data-filter="lien-hoan" onclick="setTab(this)">🌍 Liên hoan phim</div>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     MAIN GRID
+════════════════════════════ -->
+<div class="main-outer">
+  <div class="main-grid">
+
+    <!-- CỘT 1: BÀI VIẾT -->
+    <div class="col-articles">
+      <div class="sec-hdr">
+        <span class="sec-ttl">✍️ Bài viết mới nhất</span>
+        <div class="sec-line"></div>
+        <a href="blog/" class="sec-more">Xem tất cả →</a>
+      </div>
+      <div id="articles-list"></div>
+    </div>
+
+    <!-- CỘT 2: TIN TỨC + CHUYÊN MÔN -->
+    <div class="col-news">
+      <div class="sec-hdr">
+        <span class="sec-ttl">📰 Tin tức phim quốc tế</span>
+        <div class="sec-line"></div>
+        <a href="blog/" class="sec-more">Xem thêm →</a>
+      </div>
+      <div class="news-wrap" id="news-list"></div>
+
+      <div class="sec-hdr" style="position:static; top:auto;">
+        <span class="sec-ttl">🎨 Kiến thức chuyên môn</span>
+        <div class="sec-line"></div>
+        <a href="blog/" class="sec-more">Xem thêm →</a>
+      </div>
+
+      <article class="acard">
+        <div class="acard-img">
+          <img src="assets/images/phimvakhoi-thumb-sm.svg" alt="Rule of Thirds" />
+        </div>
+        <div class="acard-cat cat-tech">● Kỹ thuật đạo diễn</div>
+        <h2 class="acard-title">Rule of Thirds: Hiểu để biết khi nào nên phá vỡ nó</h2>
+        <p class="acard-excerpt">Quy tắc bố cục ba phần không phải là luật — đó là điểm xuất phát. Những đạo diễn vĩ đại nhất hiểu rằng phá vỡ quy tắc một cách có chủ ý mới tạo ra sức mạnh thật sự trong từng khung hình.</p>
+        <div class="acard-meta"><span>12 phút đọc</span><span class="sep">·</span><span>15/04/2025</span></div>
+      </article>
+
+      <article class="acard">
+        <div class="acard-row">
+          <div class="acard-img-sm">
+            <img src="assets/images/phimvakhoi-thumb-sm.svg" alt="Depth of field" />
+          </div>
+          <div class="acard-row-text">
+            <div class="acard-cat cat-tech">● Quay phim</div>
+            <h3 class="acard-title-sm">Deep focus vs Shallow focus: Khi độ sâu trường ảnh kể một câu chuyện khác</h3>
+            <div class="acard-meta"><span>9 phút đọc</span><span class="sep">·</span><span>12/04/2025</span></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="acard">
+        <div class="acard-row">
+          <div class="acard-img-sm">
+            <img src="assets/images/phimvakhoi-thumb-sm.svg" alt="Color grading" />
+          </div>
+          <div class="acard-row-text">
+            <div class="acard-cat cat-tech">● Color Grading</div>
+            <h3 class="acard-title-sm">Tại sao phim noir luôn dùng bóng tối nhiều hơn ánh sáng — và bài học cho filmmaker hiện đại</h3>
+            <div class="acard-meta"><span>7 phút đọc</span><span class="sep">·</span><span>10/04/2025</span></div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+    <!-- CỘT 3: SIDEBAR -->
+    <div class="col-sidebar">
+      <div class="sec-hdr">
+        <span class="sec-ttl">🎓 Học cùng Phim & Khói</span>
+        <div class="sec-line"></div>
+      </div>
+
+      <!-- Live banner -->
+      <div class="live-banner">
+        <div class="live-tag">
+          <span class="hero-blink"></span> Đang mở đăng ký
+        </div>
+        <div class="live-title">Ngôn ngữ Điện ảnh cho người mới bắt đầu</div>
+        <div class="live-detail">6 buổi · Zoom · Thứ 7 hàng tuần<br>Bắt đầu <strong style="color:var(--beige)">10/05/2025</strong></div>
+        <a href="truc-tiep/" class="live-btn">📝 Đăng ký ngay</a>
+      </div>
+
+      <!-- Khoá học -->
+      <div class="sb-block" style="margin-top:14px;">
+        <div class="sb-ttl">▶ Khoá học online</div>
+        <div id="courses-list"></div>
+        <div style="text-align:center; margin-top:9px;">
+          <a href="khoahoc/" style="font-size:11px; color:var(--forest); font-weight:600; letter-spacing:.05em;">
+            Xem tất cả khoá học →
+          </a>
+        </div>
+      </div>
+
+      <!-- Tags -->
+      <div class="sb-block">
+        <div class="sb-ttl">📂 Chủ đề</div>
+        <div class="tag-cloud">
+          <a href="#" class="tag t-beige">Phân tích phim</a>
+          <a href="#" class="tag t-sage">Kỹ thuật quay</a>
+          <a href="#" class="tag t-forest">Review</a>
+          <a href="#" class="tag t-sage">Liên hoan phim</a>
+          <a href="#" class="tag t-beige">Đạo diễn</a>
+          <a href="#" class="tag t-forest">Kịch bản</a>
+          <a href="#" class="tag t-sage">Indie Film</a>
+          <a href="#" class="tag t-beige">Color Grading</a>
+          <a href="#" class="tag t-forest">Montage</a>
+          <a href="#" class="tag t-sage">Âm thanh phim</a>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="sb-block">
+        <div class="sb-ttl">📬 Nhận bài viết mới</div>
+        <p style="font-size:11px; color:var(--text-faint); margin-bottom:10px; font-style:italic; line-height:1.55;">
+          Không spam. Chỉ những bài viết chất lượng, mỗi thứ Sáu một lần.
+        </p>
+        <input class="nl-input" type="email" placeholder="email@cua-ban.com" />
+        <button class="nl-btn">Đăng ký nhận tin</button>
+      </div>
+
+      <!-- Quote -->
+      <div class="sb-block">
+        <div class="sb-ttl">💬 Trích dẫn tuần này</div>
+        <div class="quote-block">
+          <div class="quote-text">"Điện ảnh không phải là một lát cắt của cuộc đời, mà là một mảnh bánh."</div>
+          <div class="quote-author">— Alfred Hitchcock</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /main-grid -->
+</div><!-- /main-outer -->
+
+<!-- ════════════════════════════
+     ABOUT STRIP
+════════════════════════════ -->
+<div class="about-wrap">
+  <div class="about-inner">
+    <div class="about-avatar"><img src="assets/images/dao-ngoc-ha.jpg" alt="Đào Ngọc Hà" onerror="this.style.display='none'"/><span id="avatar-fallback" style="display:none;font-size:26px;">👤</span></div>
+    <div style="flex:1;">
+      <div class="about-role">Đạo diễn · Người yêu điện ảnh</div>
+      <div class="about-name">Đào Ngọc Hà</div>
+      <p class="about-bio">
+        Phim &amp; Khói là nơi tôi chia sẻ tình yêu dành cho điện ảnh — không phải như một nhà phê bình hàn lâm, mà như một người đã dành nhiều năm ngồi trong bóng tối của rạp chiếu, để từng khung hình thấm vào trong. Tôi tin rằng mỗi bộ phim đều xứng đáng được đọc kỹ hơn một lần xem.
+      </p>
+    </div>
+    <a href="ve-toi.html" class="about-btn">Về tôi →</a>
+  </div>
+</div>
+
+<!-- ════════════════════════════
+     FOOTER
+════════════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="f-logo"><img src="assets/images/phimvakhoi-logo-navbar.svg" alt="Phim &amp; Khói" /></div>
+        <p class="f-desc">Nơi điện ảnh gặp gỡ thi ca. Viết về phim không phải để phán xét — mà để yêu hơn.</p>
+      </div>
+      <div>
+        <div class="f-col-ttl">Nội dung</div>
+        <ul class="f-links">
+          <li><a href="#">Phân tích phim</a></li>
+          <li><a href="#">Kỹ thuật làm phim</a></li>
+          <li><a href="#">Review phim mới</a></li>
+          <li><a href="#">Tin tức & Liên hoan</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-ttl">Khoá học</div>
+        <ul class="f-links">
+          <li><a href="#">Khoá học miễn phí</a></li>
+          <li><a href="#">Khoá học trả phí</a></li>
+          <li><a href="#">Khoá học trực tiếp</a></li>
+          <li><a href="#">Lịch học tháng này</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="f-col-ttl">Liên hệ</div>
+        <ul class="f-links">
+          <li><a href="#">Về tôi</a></li>
+          <li><a href="#">Hợp tác & PR</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+    </div>
+        <div class="footer-bottom">
+      <div class="f-copy">© 2026 Phim &amp; Khói · Đào Ngọc Hà</div>
+      <div class="footer-bottom-right">
+        <div class="theme-toggle">
+          <span class="theme-toggle-label">GIAO DIỆN</span>
+          <button class="theme-btn theme-btn-dark"  data-theme="dark"  onclick="setTheme('dark')"  title="Tối"  aria-label="Chế độ tối"></button>
+          <button class="theme-btn theme-btn-light" data-theme="light" onclick="setTheme('light')" title="Sáng" aria-label="Chế độ sáng"></button>
+        </div>
+        <div class="f-social">
+        <a href="#" class="soc-btn" title="YouTube" aria-label="YouTube">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2C0 8.1 0 12 0 12s0 3.9.5 5.8a3 3 0 0 0 2.1 2.1C4.5 20.5 12 20.5 12 20.5s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1C24 15.9 24 12 24 12s0-3.9-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="Facebook" aria-label="Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.1C24 5.4 18.6 0 12 0S0 5.4 0 12.1c0 6 4.4 11 10.1 11.9v-8.4H7.1v-3.5h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v3h-1.5c-1.5 0-2 .9-2 1.9v2.2h3.3l-.5 3.5h-2.8V24C19.6 23.1 24 18.1 24 12.1z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="Instagram" aria-label="Instagram">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8 0 3.2 0 3.6-.1 4.8-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.9.1-3.2 0-3.6 0-4.8-.1-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12c0-3.2 0-3.6.1-4.8C2.4 3.9 4 2.3 7.2 2.3c1.2-.1 1.6-.1 4.8-.1zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1.0 8.3 0 8.7 0 12c0 3.3 0 3.7.1 4.9.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24c3.3 0 3.7 0 4.9-.1 4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9 0-3.3 0-3.7-.1-4.9C23.7 2.7 21.3.3 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4A6.2 6.2 0 0 0 12 5.8zm0 10.2a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8z"/></svg>
+        </a>
+        <a href="#" class="soc-btn" title="TikTok" aria-label="TikTok">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 3.3A4.5 4.5 0 0 1 15.2 0h-3.3v16.6a2.7 2.7 0 0 1-2.7 2.5 2.7 2.7 0 0 1-2.7-2.7 2.7 2.7 0 0 1 2.7-2.7c.3 0 .5 0 .8.1V10.4a6 6 0 0 0-.8-.1 6 6 0 0 0-6 6 6 6 0 0 0 6 6 6 6 0 0 0 6-6V8.2a7.8 7.8 0 0 0 4.4 1.3V6.2a4.5 4.5 0 0 1-2.1-.9z"/></svg>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ════════════════════════════
+     SCRIPTS — Render từ dữ liệu
+════════════════════════════ -->
+<script>
+  // ── Helpers ──────────────────────────────────────────────────────────────
+const DEF_IMG = 'assets/images/phimvakhoi-thumbnail.svg';
+
+function cardBig(a) {
+  return `<a href="${a.url}" class="acard" style="display:block;text-decoration:none;color:inherit;">
+    <div class="acard-img"><img src="${a.image||DEF_IMG}" alt="${a.title}" loading="lazy"/></div>
+    <div class="acard-cat ${a.catClass}">● ${a.category}</div>
+    <h2 class="acard-title">${a.title}</h2>
+    <p class="acard-excerpt">${a.excerpt||''}</p>
+    <div class="acard-meta"><span>${a.readTime}</span><span class="sep">·</span><span>${a.date}</span></div>
+  </a>`;
+}
+
+function cardSm(a) {
+  return `<a href="${a.url}" class="acard" style="display:block;text-decoration:none;color:inherit;">
+    <div class="acard-row">
+      <div class="acard-img-sm"><img src="${a.image||DEF_IMG}" alt="${a.title}" loading="lazy"/></div>
+      <div class="acard-row-text">
+        <div class="acard-cat ${a.catClass}">● ${a.category}</div>
+        <h3 class="acard-title-sm">${a.title}</h3>
+        <div class="acard-meta"><span>${a.readTime}</span><span class="sep">·</span><span>${a.date}</span></div>
+      </div>
+    </div>
+  </a>`;
+}
+
+// ── Render articles by filter key ─────────────────────────────────────────
+function renderArticles(filterKey) {
+  const list = document.getElementById('articles-list');
+  const hdr  = document.querySelector('.col-articles .sec-ttl');
+
+  // Category keyword map
+  const CAT = {
+    'phan-tich': 'phân tích',
+    'ky-thuat':  'kỹ thuật',
+    'lien-hoan': 'liên hoan',
+  };
+
+  if (filterKey === 'tin-tuc') {
+    hdr.textContent = '📰 Tin tức phim mới nhất';
+    list.innerHTML = NEWS.map(n => `
+      <div class="nitem" style="margin-bottom:14px;">
+        <div class="ndot ${n.dot}"></div>
+        <div><div class="n-text">${n.text}</div>
+             <div class="n-src">${n.source}</div></div>
+      </div>`).join('');
+    return;
+  }
+
+  if (filterKey === 'khoa-hoc') {
+    hdr.textContent = '🎓 Khoá học';
+    list.innerHTML = COURSES.map(c => `
+      <a href="${c.url}" class="acard" style="display:block;text-decoration:none;color:inherit;">
+        <div class="acard-row">
+          <div class="acard-img-sm" style="display:flex;align-items:center;justify-content:center;font-size:30px;background:var(--bg-card);">${c.icon}</div>
+          <div class="acard-row-text">
+            <div class="acard-cat cat-tech">● Khoá học</div>
+            <h3 class="acard-title-sm">${c.name}</h3>
+            <div class="acard-meta">${c.meta} &nbsp;<span class="badge ${c.badgeClass}">${c.badge}</span></div>
+          </div>
+        </div>
+      </a>`).join('');
+    return;
+  }
+
+  // Article filter
+  const catKw = CAT[filterKey] || null;
+  hdr.textContent = filterKey === 'all'
+    ? '✍️ Bài viết mới nhất'
+    : document.querySelector(`.tab[data-filter="${filterKey}"]`).textContent.trim();
+
+  const pool = ARTICLES.filter(a => {
+    if (a.featured) return false;
+    if (!catKw) return true; // 'all' or unknown → show all
+    return a.category.toLowerCase().includes(catKw);
+  });
+
+  if (!pool.length) {
+    list.innerHTML = '<div style="padding:32px 0;text-align:center;color:var(--text-faint);font-size:13px;">Chưa có bài viết trong mục này — đang cập nhật.</div>';
+    return;
+  }
+
+  const [first, ...rest] = pool;
+  list.innerHTML = cardBig(first) + rest.map(cardSm).join('');
+}
+
+// ── Tab switching ─────────────────────────────────────────────────────────
+function setTab(el) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  renderArticles(el.dataset.filter);
+}
+
+// ── Render Hero ──
+  const featured = ARTICLES.find(a => a.featured);
+  if (featured) {
+    document.getElementById('hero-title').textContent = featured.title;
+    document.getElementById('hero-meta').innerHTML =
+      `<span>${featured.category}</span> &nbsp;·&nbsp; ${featured.readTime} &nbsp;·&nbsp; ${featured.date}`;
+    document.getElementById('hero-excerpt').textContent = featured.excerpt;
+    document.getElementById('hero-btn').href = featured.url;
+    document.getElementById('hero-img').src = featured.image;
+    document.getElementById('hero-img').alt = featured.title;
+  }
+
+  // ── Render News ──
+  const newsList = document.getElementById('news-list');
+  NEWS.forEach(n => {
+    newsList.innerHTML += `
+      <div class="nitem">
+        <div class="ndot ${n.dot}"></div>
+        <div>
+          <div class="n-text">${n.text}</div>
+          <div class="n-src">${n.source}</div>
+        </div>
+      </div>`;
+  });
+
+  // ── Render Courses ──
+  const cList = document.getElementById('courses-list');
+  COURSES.forEach(c => {
+    cList.innerHTML += `
+      <a href="${c.url}" class="c-card">
+        <div class="c-thumb">${c.icon}</div>
+        <div>
+          <div class="c-name">${c.name}</div>
+          <div class="c-meta">${c.meta}</div>
+          <span class="badge ${c.badgeClass}">${c.badge}</span>
+        </div>
+      </a>`;
+  });
+
+  
+
+    // ── Render initial articles (all) ──
+  renderArticles('all');
+
+  // ── Render News ──
+  window.addEventListener('scroll', () => {
+    document.querySelector('.nav').style.boxShadow =
+      window.scrollY > 10 ? '0 2px 24px rgba(0,0,0,.45)' : 'none';
+  });
+</script>
+
+<script src="assets/js/articles.js"></script>
+<script src="assets/js/nav.js"></script>
+<script src="assets/js/theme.js"></script>
+</body>
+</html>
